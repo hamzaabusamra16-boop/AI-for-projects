@@ -1,0 +1,1586 @@
+{
+  "Anime": [
+    {
+        "Greetings": [
+    {
+      "class": "Hello",
+      "User_questions": ["hi", "hello", "hey", "good morning", "good evening"],
+      "Answer_chat": ["Hello! How can I help you?", "Hi there!", "Hey, nice to see you!"]
+    }
+  ],
+  "Farewell": [
+    {
+      "class": "Goodbye",
+      "User_questions": ["bye", "goodbye", "see you later", "take care"],
+      "Answer_chat": ["Goodbye! Have a great day!", "See you later!", "Take care, bye!"]
+    }
+  ]
+},
+{
+      "Naruto": [
+        {
+          "class": "Definition",
+          "User_questions": ["Naruto", "what is Naruto", "tell me about Naruto"],
+          "Answer_chat": ["Naruto is a Japanese manga and anime series created by Masashi Kishimoto. It follows Naruto Uzumaki, a young ninja who seeks recognition and dreams of becoming the Hokage, the leader of his village."]
+        },
+     
+        {
+          "class": "Main Characters",
+          "User_questions": ["who are Naruto main characters", "Naruto heroes"],
+          "Answer_chat": ["Naruto Uzumaki, Sasuke Uchiha, Sakura Haruno, Kakashi Hatake, Hinata Hyuga"]
+        },
+        {
+          "class": "Supporting Characters",
+          "User_questions": ["who are Naruto side characters", "Naruto supporting cast"],
+          "Answer_chat": ["Shikamaru Nara, Choji Akimichi, Ino Yamanaka, Rock Lee, Neji Hyuga, Gaara"]
+        },
+        {
+          "class": "Locations",
+          "User_questions": ["important locations in Naruto", "Naruto world locations"],
+          "Answer_chat": ["Konohagakure (Leaf Village), Sunagakure (Sand Village), Kirigakure (Mist Village), Valley of the End, Hidden Rain Village"]
+        },
+        {
+          "class": "Worlds",
+          "User_questions": ["what worlds in Naruto", "Naruto universe"],
+          "Answer_chat": ["The Naruto universe consists of the Shinobi World, five great nations, and other hidden villages."]
+        },
+        {
+          "class": "Arcs",
+          "User_questions": ["Naruto story arcs", "list Naruto arcs"],
+          "Answer_chat": ["Land of Waves, Chunin Exams, Search for Tsunade, Sasuke Retrieval, Kazekage Rescue, Pain's Assault, Fourth Great Ninja War"]
+        },
+        {
+          "class": "Status",
+          "User_questions": ["is Naruto finished", "Naruto status"],
+          "Answer_chat": ["Naruto manga and anime are finished, but the story continues with Boruto: Naruto Next Generations."]
+        }
+      ]
+    },
+    {
+      "One Piece": [
+        {
+          "class": "Definition",
+          "User_questions": ["One Piece", "what is One Piece", "tell me about One Piece"],
+          "Answer_chat": ["One Piece is a Japanese manga and anime series by Eiichiro Oda. It follows Monkey D. Luffy and his crew as they search for the legendary treasure known as One Piece."]
+        },
+        
+        {
+          "class": "Main Characters",
+          "User_questions": ["who are One Piece main characters", "One Piece heroes"],
+          "Answer_chat": ["Monkey D. Luffy, Roronoa Zoro, Nami, Usopp, Sanji, Tony Tony Chopper, Nico Robin, Franky, Brook, Jinbe"]
+        },
+        {
+          "class": "Supporting Characters",
+          "User_questions": ["who are One Piece side characters", "One Piece supporting cast"],
+          "Answer_chat": ["Shanks, Portgas D. Ace, Boa Hancock, Trafalgar Law, Sabo, Jinbei, Vivi, Smoker"]
+        },
+        {
+          "class": "Locations",
+          "User_questions": ["important locations in One Piece", "One Piece world locations"],
+          "Answer_chat": ["East Blue, Grand Line, New World, Marineford, Dressrosa, Wano Country, Whole Cake Island"]
+        },
+        {
+          "class": "Worlds",
+          "User_questions": ["One Piece universe", "One Piece worlds"],
+          "Answer_chat": ["The One Piece world consists of four seas (North, South, East, West Blue), Grand Line, and the New World"]
+        },
+        {
+          "class": "Arcs",
+          "User_questions": ["One Piece story arcs", "list One Piece arcs"],
+          "Answer_chat": ["Romance Dawn, Orange Town, Arlong Park, Alabasta, Skypiea, Enies Lobby, Marineford, Dressrosa, Whole Cake Island, Wano"]
+        },
+        {
+          "class": "Status",
+          "User_questions": ["is One Piece finished", "One Piece status"],
+          "Answer_chat": ["One Piece manga is ongoing; anime is ongoing as well."]
+        }
+      ]
+    },
+    {
+      "Attack on Titan": [
+        {
+          "class": "Definition",
+          "User_questions": ["Attack on Titan", "what is Attack on Titan", "tell me about Attack on Titan"],
+          "Answer_chat": ["Attack on Titan is a Japanese manga and anime series by Hajime Isayama. It depicts humanity's struggle for survival against giant humanoid Titans."]
+        },
+       
+        {
+          "class": "Main Characters",
+          "User_questions": ["who are AOT main characters", "Attack on Titan heroes"],
+          "Answer_chat": ["Eren Yeager, Mikasa Ackerman, Armin Arlert, Levi Ackerman, Historia Reiss"]
+        },
+        {
+          "class": "Supporting Characters",
+          "User_questions": ["who are AOT side characters", "Attack on Titan supporting cast"],
+          "Answer_chat": ["Jean Kirstein, Connie Springer, Sasha Blouse, Hange Zoë, Erwin Smith, Reiner Braun, Bertholdt Hoover, Annie Leonhart"]
+        },
+        {
+          "class": "Locations",
+          "User_questions": ["important locations in AOT", "Attack on Titan locations"],
+          "Answer_chat": ["Wall Maria, Wall Rose, Wall Sina, Shiganshina District, Trost District, Marley, Paradis Island"]
+        },
+        {
+          "class": "Worlds",
+          "User_questions": ["AOT universe", "Attack on Titan worlds"],
+          "Answer_chat": ["The Attack on Titan universe consists of Paradis Island and the Marleyan territories."]
+        },
+        {
+          "class": "Arcs",
+          "User_questions": ["AOT story arcs", "Attack on Titan arcs"],
+          "Answer_chat": ["Fall of Shiganshina, Battle of Trost, Female Titan, Clash of the Titans, Uprising, Return to Shiganshina, Marley, War for Paradis"]
+        },
+        {
+          "class": "Status",
+          "User_questions": ["is Attack on Titan finished", "AOT status"],
+          "Answer_chat": ["Attack on Titan manga and anime have concluded with the final season."]
+        }
+      ]
+    },
+    {
+      "Fullmetal Alchemist: Brotherhood": [
+        {
+          "class": "Definition",
+          "User_questions": ["Fullmetal Alchemist", "what is Fullmetal Alchemist", "tell me about Fullmetal Alchemist"],
+          "Answer_chat": ["Fullmetal Alchemist: Brotherhood is a Japanese anime series based on the manga by Hiromu Arakawa. It follows brothers Edward and Alphonse Elric on their quest to restore their bodies using alchemy."]
+        },
+        
+        {
+          "class": "Supporting Characters",
+          "User_questions": ["who are FMA side characters", "FMA supporting cast"],
+          "Answer_chat": ["Maes Hughes, Scar, Alex Louis Armstrong, Ling Yao, Olivier Mira Armstrong, Kimblee"]
+        },
+        {
+          "class": "Locations",
+          "User_questions": ["important locations in FMA", "FMA locations"],
+          "Answer_chat": ["Amestris, Central City, Resembool, Liore, Xing, Drachma, Briggs Fortress"]
+        },
+        {
+          "class": "Worlds",
+          "User_questions": ["FMA universe", "FMA worlds"],
+          "Answer_chat": ["The Fullmetal Alchemist universe is a fictional world based on a European-inspired setting with alchemy as a major power."]
+        },
+        {
+          "class": "Arcs",
+          "User_questions": ["FMA story arcs", "Fullmetal Alchemist arcs"],
+          "Answer_chat": ["Resembool Arc, Central City Arc, Ishbal Arc, Xing Arc, Father’s Plan Arc, Promised Day Arc"]
+        },
+        {
+          "class": "Status",
+          "User_questions": ["is FMA finished", "FMA status"],
+          "Answer_chat": ["Fullmetal Alchemist: Brotherhood is complete, both manga and anime."]
+        }
+      ]
+    },
+    {
+      "Death Note": [
+        {
+          "class": "Definition",
+          "User_questions": ["Death Note", "what is Death Note", "tell me about Death Note"],
+          "Answer_chat": ["Death Note is a Japanese manga and anime series about Light Yagami, a high school student who discovers a notebook that allows him to kill anyone by writing their name in it."]
+        },
+        
+       
+        {
+          "class": "Supporting Characters",
+          "User_questions": ["who are Death Note side characters", "Death Note supporting cast"],
+          "Answer_chat": ["Soichiro Yagami, Touta Matsuda, Near, Mello"]
+        },
+        {
+          "class": "Locations",
+          "User_questions": ["important locations in Death Note", "Death Note locations"],
+          "Answer_chat": ["Tokyo, Japan; Yagami household; L's headquarters"]
+        },
+        {
+          "class": "Worlds",
+          "User_questions": ["Death Note universe", "Death Note worlds"],
+          "Answer_chat": ["Death Note takes place in a realistic modern world with supernatural elements introduced by Shinigami."]
+        },
+        {
+          "class": "Arcs",
+          "User_questions": ["Death Note story arcs", "Death Note arcs"],
+          "Answer_chat": ["Yagami vs. L, Yagami vs. Near and Mello"]
+        },
+        {
+          "class": "Status",
+          "User_questions": ["is Death Note finished", "Death Note status"],
+          "Answer_chat": ["Death Note manga and anime are finished."]
+        }
+      ]
+    },
+    {
+      "My Hero Academia": [
+        {
+          "class": "Definition",
+          "User_questions": ["My Hero Academia", "what is My Hero Academia", "tell me about My Hero Academia"],
+          "Answer_chat": ["My Hero Academia is a Japanese manga and anime series by Kohei Horikoshi. It follows Izuku Midoriya, a boy born without superpowers in a world where most people have Quirks, as he strives to become a professional hero."]
+        },
+        
+        {
+          "class": "Main Characters",
+          "User_questions": ["who are MHA main characters", "MHA heroes"],
+          "Answer_chat": ["Izuku Midoriya, Katsuki Bakugo, Ochaco Uraraka, Shoto Todoroki, All Might"]
+        },
+        {
+          "class": "Supporting Characters",
+          "User_questions": ["who are MHA side characters", "MHA supporting cast"],
+          "Answer_chat": ["Tenya Iida, Momo Yaoyorozu, Eijiro Kirishima, Tsuyu Asui, Endeavor"]
+        },
+        {
+          "class": "Locations",
+          "User_questions": ["important locations in MHA", "MHA locations"],
+          "Answer_chat": ["U.A. High School, Hero Agencies, Hosu City, I-Island, Kamino Ward"]
+        },
+        {
+          "class": "Worlds",
+          "User_questions": ["MHA universe", "MHA worlds"],
+          "Answer_chat": ["A modern world where nearly everyone has Quirks (superpowers), and professional heroes maintain order."]
+        },
+        {
+          "class": "Arcs",
+          "User_questions": ["MHA story arcs", "MHA arcs"],
+          "Answer_chat": ["Entrance Exam Arc, U.A. Sports Festival, Hero Internship, Provisional Hero License Exam, Joint Training Arc, Paranormal Liberation War"]
+        },
+        {
+          "class": "Status",
+          "User_questions": ["is MHA finished", "MHA status"],
+          "Answer_chat": ["My Hero Academia manga and anime are ongoing."]
+        }
+      ]
+    },
+    {
+      "Demon Slayer": [
+        {
+          "class": "Definition",
+          "User_questions": ["Demon Slayer", "what is Demon Slayer", "tell me about Demon Slayer"],
+          "Answer_chat": ["Demon Slayer is a Japanese manga and anime series by Koyoharu Gotouge. It follows Tanjiro Kamado as he battles demons to save his sister and avenge his family."]
+        },
+        {
+          "class": "Main Characters",
+          "User_questions": ["who are Demon Slayer main characters", "Demon Slayer heroes"],
+          "Answer_chat": ["Tanjiro Kamado, Nezuko Kamado, Zenitsu Agatsuma, Inosuke Hashibira, Kanao Tsuyuri"]
+        },
+        {
+          "class": "Supporting Characters",
+          "User_questions": ["who are Demon Slayer side characters", "Demon Slayer supporting cast"],
+          "Answer_chat": ["Giyu Tomioka, Shinobu Kocho, Kyojuro Rengoku, Tengen Uzui, Mitsuri Kanroji"]
+        },
+        {
+          "class": "Locations",
+          "User_questions": ["important locations in Demon Slayer", "Demon Slayer locations"],
+          "Answer_chat": ["Mount Sagiri, Asakusa, Infinity Castle, Natagumo Mountain, Entertainment District"]
+        },
+        {
+          "class": "Worlds",
+          "User_questions": ["Demon Slayer universe", "Demon Slayer worlds"],
+          "Answer_chat": ["A fictional Taisho-era Japan where demons exist and Demon Slayer Corps fights them."]
+        },
+        {
+          "class": "Arcs",
+          "User_questions": ["Demon Slayer story arcs", "Demon Slayer arcs"],
+          "Answer_chat": ["Final Selection, Asakusa Arc, Tsuzumi Mansion, Natagumo Mountain, Rehabilitation Training, Mount Natagumo, Entertainment District, Mugen Train, Infinity Castle"]
+        },
+        {
+          "class": "Status",
+          "User_questions": ["is Demon Slayer finished", "Demon Slayer status"],
+          "Answer_chat": ["Demon Slayer anime is ongoing with multiple seasons; manga is finished."]
+        }
+      ]
+    },
+    {
+      "Sword Art Online": [
+        {
+          "class": "Definition",
+          "User_questions": ["Sword Art Online", "what is Sword Art Online", "tell me about Sword Art Online"],
+          "Answer_chat": ["Sword Art Online is a Japanese light novel, manga, and anime series about players trapped in virtual reality MMORPG worlds, fighting to survive and escape."]
+        },
+        {
+          "class": "Main Characters",
+          "User_questions": ["who are SAO main characters", "Sword Art Online heroes"],
+          "Answer_chat": ["Kirito (Kazuto Kirigaya), Asuna Yuuki, Sinon, Leafa, Alice Zuberg"]
+        },
+        {
+          "class": "Supporting Characters",
+          "User_questions": ["who are SAO side characters", "SAO supporting cast"],
+          "Answer_chat": ["Klein, Lisbeth, Silica, Agil, Yuuki Konno"]
+        },
+        {
+          "class": "Locations",
+          "User_questions": ["important locations in SAO", "Sword Art Online locations"],
+          "Answer_chat": ["Aincrad, Alfheim Online, Underworld, Gun Gale Online, Tokyo"]
+        },
+        {
+          "class": "Worlds",
+          "User_questions": ["SAO universe", "SAO worlds"],
+          "Answer_chat": ["Virtual reality MMORPG worlds (Aincrad, Alfheim, Gun Gale, Underworld) and real-life Tokyo."]
+        },
+        {
+          "class": "Arcs",
+          "User_questions": ["SAO story arcs", "Sword Art Online arcs"],
+          "Answer_chat": ["Aincrad Arc, Fairy Dance Arc, Phantom Bullet Arc, Mother's Rosario Arc, Alicization Arc"]
+        },
+        {
+          "class": "Status",
+          "User_questions": ["is SAO finished", "SAO status"],
+          "Answer_chat": ["SAO anime is ongoing; manga completed in several arcs."]
+        }
+      ]
+    },
+    {
+      "Tokyo Revengers": [
+        {
+          "class": "Definition",
+          "User_questions": ["Tokyo Revengers", "what is Tokyo Revengers", "tell me about Tokyo Revengers"],
+          "Answer_chat": ["Tokyo Revengers is a Japanese manga and anime series about Takemichi Hanagaki, who travels back in time to save his ex-girlfriend and change the fate of Tokyo's delinquent gangs."]
+        },
+        
+        {
+          "class": "Main Characters",
+          "User_questions": ["who are Tokyo Revengers main characters", "TR heroes"],
+          "Answer_chat": ["Takemichi Hanagaki, Manjiro 'Mikey' Sano, Ken 'Draken' Ryuguji, Hinata Tachibana"]
+        },
+        {
+          "class": "Supporting Characters",
+          "User_questions": ["who are Tokyo Revengers side characters", "TR supporting cast"],
+          "Answer_chat": ["Tetta Kisaki, Chifuyu Matsuno, Takashi Mitsuya, Kazutora Hanemiya, Emma Sano"]
+        },
+        {
+          "class": "Locations",
+          "User_questions": ["important locations in Tokyo Revengers", "TR locations"],
+          "Answer_chat": ["Tokyo, Mikey's Hideout, Toman Headquarters, Moebius Hideout, Valhalla Headquarters"]
+        },
+        {
+          "class": "Worlds",
+          "User_questions": ["TR universe", "Tokyo Revengers worlds"],
+          "Answer_chat": ["Set in modern Tokyo with time-travel element allowing the protagonist to alter past events."]
+        },
+        {
+          "class": "Arcs",
+          "User_questions": ["TR story arcs", "Tokyo Revengers arcs"],
+          "Answer_chat": ["Bloody Halloween, Christmas Showdown, Tenjiku Arc, Mikey vs Kisaki, Final Battle"]
+        },
+        {
+          "class": "Status",
+          "User_questions": ["is Tokyo Revengers finished", "TR status"],
+          "Answer_chat": ["Tokyo Revengers manga finished; anime completed first season, second season ongoing."]
+        }
+      ]
+    },
+    {
+      "Jujutsu Kaisen": [
+        {
+          "class": "Definition",
+          "User_questions": ["Jujutsu Kaisen", "what is Jujutsu Kaisen", "tell me about Jujutsu Kaisen"],
+          "Answer_chat": ["Jujutsu Kaisen is a Japanese manga and anime series about Yuji Itadori, who joins a secret organization of sorcerers to fight cursed spirits."]
+        },
+        {
+          "class": "Main Characters",
+          "User_questions": ["who are Jujutsu Kaisen main characters", "Jujutsu Kaisen heroes"],
+          "Answer_chat": ["Yuji Itadori, Megumi Fushiguro, Nobara Kugisaki, Satoru Gojo"]
+        },
+        {
+          "class": "Supporting Characters",
+          "User_questions": ["who are Jujutsu Kaisen side characters", "Jujutsu Kaisen supporting cast"],
+          "Answer_chat": ["Kento Nanami, Panda, Maki Zenin, Toge Inumaki, Suguru Geto"]
+        },
+        {
+          "class": "Locations",
+          "User_questions": ["important locations in Jujutsu Kaisen", "Jujutsu Kaisen locations"],
+          "Answer_chat": ["Tokyo Jujutsu High, Shibuya, Cursed Sites, Kyoto Jujutsu High"]
+        },
+        {
+          "class": "Worlds",
+          "User_questions": ["Jujutsu Kaisen universe", "Jujutsu Kaisen worlds"],
+          "Answer_chat": ["Modern Japan with a secret world of sorcerers and cursed spirits."]
+        },
+        {
+          "class": "Arcs",
+          "User_questions": ["Jujutsu Kaisen story arcs", "Jujutsu Kaisen arcs"],
+          "Answer_chat": ["Cursed Womb Arc, Kyoto Goodwill Event, Death Painting Arc, Shibuya Incident, Gojo's Past"]
+        },
+          {
+            "class": "Status",
+            "User_questions": ["is Jujutsu Kaisen finished", "Jujutsu Kaisen status"],
+            "Answer_chat": ["Jujutsu Kaisen anime is ongoing; manga continues."]
+          }
+        ]
+      },
+      {
+        "Hunter x Hunter": [
+        {
+          "class": "Definition",
+          "User_questions": ["Hunter x Hunter", "what is Hunter x Hunter", "tell me about Hunter x Hunter"],
+          "Answer_chat": ["Hunter x Hunter is a Japanese manga and anime series by Yoshihiro Togashi. It follows Gon Freecss as he becomes a Hunter and searches for his father."]
+        },
+        {
+          "class": "Main Characters",
+          "User_questions": ["who are HxH main characters", "Hunter x Hunter heroes"],
+          "Answer_chat": ["Gon Freecss, Killua Zoldyck, Kurapika, Leorio Paradinight"]
+        },
+        {
+          "class": "Supporting Characters",
+          "User_questions": ["who are HxH side characters", "HxH supporting cast"],
+          "Answer_chat": ["Hisoka, Illumi Zoldyck, Chrollo Lucilfer, Biscuit Krueger"]
+        },
+        {
+          "class": "Locations",
+          "User_questions": ["important locations in HxH", "HxH world locations"],
+          "Answer_chat": ["Yorknew City, Greed Island, Heaven's Arena, NGL, Meteor City"]
+        },
+        {
+          "class": "Worlds",
+          "User_questions": ["HxH universe", "Hunter x Hunter worlds"],
+          "Answer_chat": ["Hunter x Hunter universe consists of multiple continents, countries, and the Hunter Association"]
+        },
+        {
+          "class": "Arcs",
+          "User_questions": ["HxH story arcs", "Hunter x Hunter arcs"],
+          "Answer_chat": ["Hunter Exam, Heaven's Arena, Yorknew City, Greed Island, Chimera Ant, Election"]
+        },
+        {
+          "class": "Status",
+          "User_questions": ["is HxH finished", "HxH status"],
+          "Answer_chat": ["Hunter x Hunter manga is ongoing with long hiatuses; anime 2011 series ended."]
+        }
+      ]
+    },
+    {
+      "Bleach: Thousand-Year Blood War": [
+        {
+          "class": "Definition",
+          "User_questions": ["Bleach", "what is Bleach", "tell me about Bleach"],
+          "Answer_chat": ["Bleach is a Japanese manga and anime series by Tite Kubo. It follows Ichigo Kurosaki, who gains the powers of a Soul Reaper to protect the living and the dead."]
+        },
+        {
+          "class": "Main Characters",
+          "User_questions": ["who are Bleach TYBW main characters", "Bleach TYBW heroes"],
+          "Answer_chat": ["Ichigo Kurosaki, Rukia Kuchiki, Renji Abarai, Uryu Ishida, Orihime Inoue"]
+        },
+        {
+          "class": "Supporting Characters",
+          "User_questions": ["who are Bleach TYBW side characters", "Bleach TYBW supporting cast"],
+          "Answer_chat": ["Toshiro Hitsugaya, Kenpachi Zaraki, Yoruichi Shihouin, Mayuri Kurotsuchi"]
+        },
+        {
+          "class": "Locations",
+          "User_questions": ["important locations in Bleach TYBW", "Bleach TYBW locations"],
+          "Answer_chat": ["Soul Society, Karakura Town, Hueco Mundo, Wandenreich"]
+        },
+        {
+          "class": "Worlds",
+          "User_questions": ["Bleach universe", "Bleach worlds"],
+          "Answer_chat": ["Bleach universe has Human World, Soul Society, Hueco Mundo, and the Wandenreich territories"]
+        },
+        {
+          "class": "Arcs",
+          "User_questions": ["Bleach TYBW story arcs", "Bleach TYBW arcs"],
+          "Answer_chat": ["Thousand-Year Blood War Arc"]
+        },
+        {
+          "class": "Status",
+          "User_questions": ["is Bleach TYBW finished", "Bleach TYBW status"],
+          "Answer_chat": ["Bleach Thousand-Year Blood War anime is ongoing; manga finished."]
+        }
+      ]
+    },
+    {
+      "Cowboy Bebop": [
+        {
+          "class": "Definition",
+          "User_questions": ["Cowboy Bebop", "what is Cowboy Bebop", "tell me about Cowboy Bebop"],
+          "Answer_chat": ["Cowboy Bebop is a Japanese anime series set in a futuristic world, following bounty hunters traveling through space on the spaceship Bebop."]
+        },
+        {
+          "class": "Main Characters",
+          "User_questions": ["who are Cowboy Bebop main characters", "Cowboy Bebop heroes"],
+          "Answer_chat": ["Spike Spiegel, Jet Black, Faye Valentine, Edward, Ein"]
+        },
+        {
+          "class": "Supporting Characters",
+          "User_questions": ["who are Cowboy Bebop side characters", "Cowboy Bebop supporting cast"],
+          "Answer_chat": ["Vicious, Julia, Gren, Punch, Judy"]
+        },
+        {
+          "class": "Locations",
+          "User_questions": ["important locations in Cowboy Bebop", "Cowboy Bebop locations"],
+          "Answer_chat": ["Earth, Mars, Titan, Jupiter, Space Stations"]
+        },
+        {
+          "class": "Worlds",
+          "User_questions": ["Cowboy Bebop universe", "Cowboy Bebop worlds"],
+          "Answer_chat": ["A futuristic space-faring universe with multiple planets colonized by humans"]
+        },
+        {
+          "class": "Arcs",
+          "User_questions": ["Cowboy Bebop story arcs", "Cowboy Bebop arcs"],
+          "Answer_chat": ["Ballad of Fallen Angels, Jupiter Jazz, Mushroom Samba, Session XX – The Real Folk Blues"]
+        },
+        {
+          "class": "Status",
+          "User_questions": ["is Cowboy Bebop finished", "Cowboy Bebop status"],
+          "Answer_chat": ["Cowboy Bebop anime is complete."]
+        }
+      ]
+    },
+    {
+      "Neon Genesis Evangelion": [
+        {
+          "class": "Definition",
+          "User_questions": ["Neon Genesis Evangelion", "what is Evangelion", "tell me about Evangelion"],
+          "Answer_chat": ["Neon Genesis Evangelion is a Japanese anime series about teenagers piloting giant mechs to protect Earth from mysterious beings called Angels."]
+        },
+        {
+          "class": "Main Characters",
+          "User_questions": ["who are Evangelion main characters", "Evangelion heroes"],
+          "Answer_chat": ["Shinji Ikari, Rei Ayanami, Asuka Langley Soryu, Misato Katsuragi"]
+        },
+        {
+          "class": "Supporting Characters",
+          "User_questions": ["who are Evangelion side characters", "Evangelion supporting cast"],
+          "Answer_chat": ["Gendo Ikari, Ryoji Kaji, Toji Suzuhara, Kensuke Aida"]
+        },
+        {
+          "class": "Locations",
+          "User_questions": ["important locations in Evangelion", "Evangelion locations"],
+          "Answer_chat": ["Tokyo-3, NERV Headquarters, GeoFront, Angels' attack sites"]
+        },
+        {
+          "class": "Worlds",
+          "User_questions": ["Evangelion universe", "Evangelion worlds"],
+          "Answer_chat": ["A post-apocalyptic Earth with advanced mecha and mysterious beings called Angels"]
+        },
+        {
+          "class": "Arcs",
+          "User_questions": ["Evangelion story arcs", "Evangelion arcs"],
+          "Answer_chat": ["First Angel attacks, Second Impact events, End of Evangelion"]
+        },
+        {
+          "class": "Status",
+          "User_questions": ["is Evangelion finished", "Evangelion status"],
+          "Answer_chat": ["Anime completed with TV series and movies."]
+        }
+      ]
+    },
+    {
+      "Steins;Gate": [
+        {
+          "class": "Definition",
+          "User_questions": ["Steins;Gate", "what is Steins;Gate", "tell me about Steins;Gate"],
+          "Answer_chat": ["Steins;Gate is a Japanese visual novel and anime series about time travel, following Rintarou Okabe and his friends as they discover how to change the past."]
+        },
+        
+        
+        {
+          "class": "Main Characters",
+          "User_questions": ["who are Steins;Gate main characters", "Steins;Gate heroes"],
+          "Answer_chat": ["Rintarou Okabe, Kurisu Makise, Mayuri Shiina, Itaru Hashida"]
+        },
+        {
+          "class": "Supporting Characters",
+          "User_questions": ["who are Steins;Gate side characters", "Steins;Gate supporting cast"],
+          "Answer_chat": ["Suzuha Amane, Faris NyanNyan, Moeka Kiryu, Luka Urushibara"]
+        },
+        {
+          "class": "Locations",
+          "User_questions": ["important locations in Steins;Gate", "Steins;Gate locations"],
+          "Answer_chat": ["Akihabara, Future Gadget Lab, Radio Tower, CERN"]
+        },
+        {
+          "class": "Worlds",
+          "User_questions": ["Steins;Gate universe", "Steins;Gate worlds"],
+          "Answer_chat": ["A realistic modern Tokyo with time-traveling parallel worldlines"]
+        },
+        {
+          "class": "Arcs",
+          "User_questions": ["Steins;Gate story arcs", "Steins;Gate arcs"],
+          "Answer_chat": ["Lab Member Arcs, Reading Steiner, Beta Worldline, Steins Gate Worldline"]
+        },
+        {
+          "class": "Status",
+          "User_questions": ["is Steins;Gate finished", "Steins;Gate status"],
+          "Answer_chat": ["Anime and visual novel are complete."]
+        }
+      ]
+    },
+    {
+      "Dragon Ball Z": [
+        {
+          "class": "Definition",
+          "User_questions": ["Dragon Ball Z", "what is Dragon Ball Z", "tell me about Dragon Ball Z"],
+          "Answer_chat": ["Dragon Ball Z is a Japanese anime series by Akira Toriyama. It follows Goku and his friends as they defend Earth from powerful foes."]
+        },
+        {
+          "class": "Main Characters",
+          "User_questions": ["who are DBZ main characters", "Dragon Ball Z heroes"],
+          "Answer_chat": ["Goku, Vegeta, Gohan, Piccolo, Krillin"]
+        },
+        {
+          "class": "Supporting Characters",
+          "User_questions": ["who are DBZ side characters", "DBZ supporting cast"],
+          "Answer_chat": ["Bulma, Trunks, Android 18, Master Roshi, Yamcha"]
+        },
+        {
+          "class": "Locations",
+          "User_questions": ["important locations in DBZ", "DBZ world locations"],
+          "Answer_chat": ["Earth, Namek, Planet Vegeta, Capsule Corp, Other World"]
+        },
+        {
+          "class": "Worlds",
+          "User_questions": ["DBZ universe", "Dragon Ball Z worlds"],
+          "Answer_chat": ["Earth, Universe 7, Otherworlds, Planet Namek, Various other universes"]
+        },
+        {
+          "class": "Arcs",
+          "User_questions": ["DBZ story arcs", "Dragon Ball Z arcs"],
+          "Answer_chat": ["Saiyan Saga, Frieza Saga, Cell Saga, Majin Buu Saga"]
+        },
+        {
+          "class": "Status",
+          "User_questions": ["is DBZ finished", "DBZ status"],
+          "Answer_chat": ["Dragon Ball Z anime is complete."]
+        }
+      ]
+    },
+    {
+      "Code Geass": [
+        {
+          "class": "Definition",
+          "User_questions": ["Code Geass", "what is Code Geass", "tell me about Code Geass"],
+          "Answer_chat": ["Code Geass is a Japanese anime series about Lelouch Lamperouge, who gains a mysterious power called Geass and leads a rebellion against an empire."]
+        },
+        {
+          "class": "Main Characters",
+          "User_questions": ["who are Code Geass main characters", "Code Geass heroes"],
+          "Answer_chat": ["Lelouch Lamperouge, C.C., Suzaku Kururugi, Kallen Stadtfeld"]
+        },
+        {
+          "class": "Supporting Characters",
+          "User_questions": ["who are Code Geass side characters", "Code Geass supporting cast"],
+          "Answer_chat": ["Nunnally Lamperouge, Jeremiah Gottwald, Cornelia li Britannia"]
+        },
+        {
+          "class": "Locations",
+          "User_questions": ["important locations in Code Geass", "Code Geass locations"],
+          "Answer_chat": ["Area 11, Ashford Academy, Britannian Empire, Tokyo Settlement"]
+        },
+        {
+          "class": "Worlds",
+          "User_questions": ["Code Geass universe", "Code Geass worlds"],
+          "Answer_chat": ["Alternate Earth dominated by the Holy Britannian Empire with colonies like Area 11"]
+        },
+        {
+          "class": "Arcs",
+          "User_questions": ["Code Geass story arcs", "Code Geass arcs"],
+          "Answer_chat": ["Black Rebellion, The Zero Requiem"]
+        },
+        {
+          "class": "Status",
+          "User_questions": ["is Code Geass finished", "Code Geass status"],
+          "Answer_chat": ["Anime is complete."]
+        }
+      ]
+    },
+    {
+      "Your Name": [
+        {
+          "class": "Definition",
+          "User_questions": ["Your Name", "what is Your Name", "tell me about Your Name"],
+          "Answer_chat": ["Your Name is a Japanese animated film by Makoto Shinkai. It tells the story of two teenagers who mysteriously swap bodies and try to meet each other."]
+        },
+        {
+          "class": "Main Characters",
+          "User_questions": ["who are Your Name main characters", "Your Name heroes"],
+          "Answer_chat": ["Mitsuha Miyamizu, Taki Tachibana"]
+        },
+        {
+          "class": "Supporting Characters",
+          "User_questions": ["who are Your Name side characters", "Your Name supporting cast"],
+          "Answer_chat": ["Sayaka, Tsukasa, Tetsuya, Various classmates"]
+        },
+        {
+          "class": "Locations",
+          "User_questions": ["important locations in Your Name", "Your Name locations"],
+          "Answer_chat": ["Itomori Town, Tokyo, Mitsuha's house, Taki's apartment"]
+        },
+        {
+          "class": "Worlds",
+          "User_questions": ["Your Name universe", "Your Name worlds"],
+          "Answer_chat": ["A realistic modern Japan with a supernatural body-swapping phenomenon"]
+        },
+        {
+          "class": "Arcs",
+          "User_questions": ["Your Name story arcs", "Your Name arcs"],
+          "Answer_chat": ["Body Swap, Searching for Each Other, Comet Disaster"]
+        },
+        {
+          "class": "Status",
+          "User_questions": ["is Your Name finished", "Your Name status"],
+          "Answer_chat": ["Movie is complete."]
+        }
+      ]
+    },
+    {
+      "Weathering with You": [
+        {
+          "class": "Definition",
+          "User_questions": ["Weathering with You", "what is Weathering with You", "tell me about Weathering with You"],
+          "Answer_chat": ["Weathering with You is a Japanese animated film by Makoto Shinkai. It follows Hodaka and Hina as they discover supernatural weather powers in Tokyo."]
+        },
+        {
+          "class": "Main Characters",
+          "User_questions": ["who are Weathering with You main characters", "Weathering with You heroes"],
+          "Answer_chat": ["Hodaka Morishima, Hina Amano"]
+        },
+        {
+          "class": "Supporting Characters",
+          "User_questions": ["who are Weathering with You side characters", "Weathering with You supporting cast"],
+          "Answer_chat": ["Keisuke Suga, Nagi Amano, Miyako, Police officers"]
+        },
+        {
+          "class": "Locations",
+          "User_questions": ["important locations in Weathering with You", "Weathering with You locations"],
+          "Answer_chat": ["Tokyo, Downtown alleys, Hina's home, Police station"]
+        },
+        {
+          "class": "Worlds",
+          "User_questions": ["Weathering with You universe", "Weathering with You worlds"],
+          "Answer_chat": ["Modern Tokyo with supernatural weather-controlling elements"]
+        },
+        {
+          "class": "Arcs",
+          "User_questions": ["Weathering with You story arcs", "Weathering with You arcs"],
+          "Answer_chat": ["Hodaka moving to Tokyo, Meeting Hina, Weather miracles, Climax during rainstorm"]
+        },
+        {
+          "class": "Status",
+          "User_questions": ["is Weathering with You finished", "Weathering with You status"],
+          "Answer_chat": ["Movie is complete."]
+        }
+      ]
+    },
+    {
+      "Mob Psycho 100": [
+        {
+          "class": "Definition",
+          "User_questions": ["Mob Psycho 100", "what is Mob Psycho 100", "tell me about Mob Psycho 100"],
+          "Answer_chat": ["Mob Psycho 100 is a Japanese manga and anime series about Shigeo 'Mob' Kageyama, a boy with powerful psychic abilities trying to live a normal life."]
+        },
+        {
+          "class": "Main Characters",
+          "User_questions": ["who are Mob Psycho main characters", "Mob Psycho heroes"],
+          "Answer_chat": ["Shigeo 'Mob' Kageyama, Reigen Arataka, Dimple"]
+        },
+        {
+          "class": "Supporting Characters",
+          "User_questions": ["who are Mob Psycho side characters", "Mob Psycho supporting cast"],
+          "Answer_chat": ["Teruki Hanazawa, Ritsu Kageyama, Tome"]
+        },
+        {
+          "class": "Locations",
+          "User_questions": ["important locations in Mob Psycho", "Mob Psycho locations"],
+          "Answer_chat": ["Telepathy Club, Elementary School, Spirit Sites, Mob’s Home"]
+        },
+        {
+          "class": "Worlds",
+          "User_questions": ["Mob Psycho universe", "Mob Psycho worlds"],
+          "Answer_chat": ["Modern Japan with psychic powers and spirits"]
+        },
+        {
+          "class": "Arcs",
+          "User_questions": ["Mob Psycho story arcs", "Mob Psycho arcs"],
+          "Answer_chat": ["Claw Arc, Awakening of Mob, Ultimate ESP Battle, Final Arc"]
+        },
+        {
+          "class": "Status",
+          "User_questions": ["is Mob Psycho finished", "Mob Psycho status"],
+          "Answer_chat": ["Anime complete; manga complete."]
+        }
+      ]
+    },
+    {
+      "Vinland Saga": [
+        {
+          "class": "Definition",
+          "User_questions": ["Vinland Saga", "what is Vinland Saga", "tell me about Vinland Saga"],
+          "Answer_chat": ["Vinland Saga is a Japanese manga and anime series set in Viking Age Europe, following Thorfinn's journey for revenge and discovery."]
+        },
+        {
+          "class": "Main Characters",
+          "User_questions": ["who are Vinland Saga main characters", "Vinland Saga heroes"],
+          "Answer_chat": ["Thorfinn, Askeladd, Canute"]
+        },
+        {
+          "class": "Supporting Characters",
+          "User_questions": ["who are Vinland Saga side characters", "Vinland Saga supporting cast"],
+          "Answer_chat": ["Leif Erikson, Thorkell, Bjorn, Ketil"]
+        },
+        {
+          "class": "Locations",
+          "User_questions": ["important locations in Vinland Saga", "Vinland Saga locations"],
+          "Answer_chat": ["Denmark, England, Iceland, Vinland"]
+        },
+        {
+          "class": "Worlds",
+          "User_questions": ["Vinland Saga universe", "Vinland Saga worlds"],
+          "Answer_chat": ["Viking Age Europe with real historical settings and fictionalized events"]
+        },
+        {
+          "class": "Arcs",
+          "User_questions": ["Vinland Saga story arcs", "Vinland Saga arcs"],
+          "Answer_chat": ["Prologue, Thorfinn's Revenge, Askeladd Arc, Canute Arc, Vinland Journey"]
+        },
+        {
+          "class": "Status",
+          "User_questions": ["is Vinland Saga finished", "Vinland Saga status"],
+          "Answer_chat": ["Manga ongoing; anime seasonal."]
+        }
+      ]
+    },
+    {
+      "Black Clover": [
+        {
+          "class": "Definition",
+          "User_questions": ["Black Clover", "what is Black Clover", "tell me about Black Clover"],
+          "Answer_chat": ["Black Clover is a Japanese manga and anime series about Asta, a boy born without magic in a world where magic is everything, striving to become the Wizard King."]
+        },
+        {
+          "class": "Main Characters",
+          "User_questions": ["who are Black Clover main characters", "Black Clover heroes"],
+          "Answer_chat": ["Asta, Yuno, Noelle Silva, Yami Sukehiro"]
+        },
+        {
+          "class": "Supporting Characters",
+          "User_questions": ["who are Black Clover side characters", "Black Clover supporting cast"],
+          "Answer_chat": ["Finral, Luck, Charmy, Gauche, Mereoleona"]
+        },
+        {
+          "class": "Locations",
+          "User_questions": ["important locations in Black Clover", "Black Clover locations"],
+          "Answer_chat": ["Clover Kingdom, Diamond Kingdom, Spade Kingdom, Heart Kingdom"]
+        },
+        {
+          "class": "Worlds",
+          "User_questions": ["Black Clover universe", "Black Clover worlds"],
+          "Answer_chat": ["A magical world with four kingdoms and magic knights"]
+        },
+        {
+          "class": "Arcs",
+          "User_questions": ["Black Clover story arcs", "Black Clover arcs"],
+          "Answer_chat": ["Royal Capital Arc, Eye of Midnight Sun, Elf Reincarnation, Spade Kingdom Invasion"]
+        },
+        {
+          "class": "Status",
+          "User_questions": ["is Black Clover finished", "Black Clover status"],
+          "Answer_chat": ["Anime finished; manga ongoing."]
+        }
+      ]
+    },
+    {
+      "Dororo": [
+        {
+          "class": "Definition",
+          "User_questions": ["Dororo", "what is Dororo", "tell me about Dororo"],
+          "Answer_chat": ["Dororo is a Japanese manga and anime series about Hyakkimaru, a young man seeking to reclaim his stolen body parts from demons, accompanied by a child named Dororo."]
+        },
+        {
+          "class": "Main Characters",
+          "User_questions": ["who are Dororo main characters", "Dororo heroes"],
+          "Answer_chat": ["Hyakkimaru, Dororo"]
+        },
+        {
+          "class": "Supporting Characters",
+          "User_questions": ["who are Dororo side characters", "Dororo supporting cast"],
+          "Answer_chat": ["Tahomaru, Biwa, Mio"]
+        },
+        {
+          "class": "Locations",
+          "User_questions": ["important locations in Dororo", "Dororo locations"],
+          "Answer_chat": ["Feudal Japan villages, Samurai castles, Mountains"]
+        },
+        {
+          "class": "Worlds",
+          "User_questions": ["Dororo universe", "Dororo worlds"],
+          "Answer_chat": ["Feudal Japan with supernatural yokai and demons"]
+        },
+        {
+          "class": "Arcs",
+          "User_questions": ["Dororo story arcs", "Dororo arcs"],
+          "Answer_chat": ["Hyakkimaru's Quest, Recovering Body Parts, Confronting Tahomaru, Demon Battles"]
+        },
+        {
+          "class": "Status",
+          "User_questions": ["is Dororo finished", "Dororo status"],
+          "Answer_chat": ["Anime complete; manga complete."]
+        }
+      ]
+    },
+    {
+      "Bleach": [
+        {
+          "class": "Definition",
+          "User_questions": ["Bleach", "what is Bleach", "tell me about Bleach"],
+          "Answer_chat": ["Bleach is a Japanese manga and anime series by Tite Kubo. It follows Ichigo Kurosaki, who gains the powers of a Soul Reaper to protect the living and the dead."]
+        },
+        {
+          "class": "Main Characters",
+          "User_questions": ["who are Bleach main characters", "Bleach heroes"],
+          "Answer_chat": ["Ichigo Kurosaki, Rukia Kuchiki, Orihime Inoue, Uryu Ishida, Renji Abarai"]
+        },
+        {
+          "class": "Supporting Characters",
+          "User_questions": ["who are Bleach side characters", "Bleach supporting cast"],
+          "Answer_chat": ["Yasutora 'Chad' Sado, Kisuke Urahara, Toshiro Hitsugaya, Kenpachi Zaraki"]
+        },
+        {
+          "class": "Locations",
+          "User_questions": ["important locations in Bleach", "Bleach locations"],
+          "Answer_chat": ["Karakura Town, Soul Society, Hueco Mundo, Seireitei"]
+        },
+        {
+          "class": "Worlds",
+          "User_questions": ["Bleach universe", "Bleach worlds"],
+          "Answer_chat": ["Human World, Soul Society, Hueco Mundo, Hell"]
+        },
+        {
+          "class": "Arcs",
+          "User_questions": ["Bleach story arcs", "Bleach arcs"],
+          "Answer_chat": ["Agent of the Shinigami, Soul Society, Arrancar, Hueco Mundo, Fake Karakura Town"]
+        },
+        {
+          "class": "Status",
+          "User_questions": ["is Bleach finished", "Bleach status"],
+          "Answer_chat": ["Bleach manga finished; anime concluded with Thousand-Year Blood War arc ongoing."]
+        }
+      ]
+    },
+    {
+      "Fairy Tail": [
+        {
+          "class": "Definition",
+          "User_questions": ["Fairy Tail", "what is Fairy Tail", "tell me about Fairy Tail"],
+          "Answer_chat": ["Fairy Tail is a Japanese manga and anime series about Natsu Dragneel and his friends in the Fairy Tail guild, embarking on magical adventures."]
+        },
+        {
+          "class": "Main Characters",
+          "User_questions": ["who are Fairy Tail main characters", "Fairy Tail heroes"],
+          "Answer_chat": ["Natsu Dragneel, Lucy Heartfilia, Gray Fullbuster, Erza Scarlet, Wendy Marvell"]
+        },
+        {
+          "class": "Supporting Characters",
+          "User_questions": ["who are Fairy Tail side characters", "Fairy Tail supporting cast"],
+          "Answer_chat": ["Happy, Carla, Gajeel Redfox, Juvia Lockser, Laxus Dreyar"]
+        },
+        {
+          "class": "Locations",
+          "User_questions": ["important locations in Fairy Tail", "Fairy Tail locations"],
+          "Answer_chat": ["Fiore Kingdom, Magnolia Town, Fairy Tail Guild, Tenrou Island, Edolas"]
+        },
+        {
+          "class": "Worlds",
+          "User_questions": ["Fairy Tail universe", "Fairy Tail worlds"],
+          "Answer_chat": ["A magical world with multiple kingdoms, guilds, and magical realms"]
+        },
+        {
+          "class": "Arcs",
+          "User_questions": ["Fairy Tail story arcs", "Fairy Tail arcs"],
+          "Answer_chat": ["Macao Arc, Lullaby Arc, Phantom Lord, Tower of Heaven, Nirvana Arc, Grand Magic Games"]
+        },
+        {
+          "class": "Status",
+          "User_questions": ["is Fairy Tail finished", "Fairy Tail status"],
+          "Answer_chat": ["Manga finished; anime concluded."]
+        }
+      ]
+    },
+    {
+      "Re:Zero": [
+        {
+          "class": "Definition",
+          "User_questions": ["Re:Zero", "what is Re:Zero", "tell me about Re:Zero"],
+          "Answer_chat": ["Re:Zero is a Japanese light novel, manga, and anime series about Subaru Natsuki, who is transported to a fantasy world and discovers he can return by death."]
+        },
+        {
+          "class": "Main Characters",
+          "User_questions": ["who are ReZero main characters", "ReZero heroes"],
+          "Answer_chat": ["Subaru Natsuki, Emilia, Rem, Ram, Beatrice"]
+        },
+        {
+          "class": "Supporting Characters",
+          "User_questions": ["who are ReZero side characters", "ReZero supporting cast"],
+          "Answer_chat": ["Roswaal L. Mathers, Crusch Karsten, Felt, Wilhelm van Astrea"]
+        },
+        {
+          "class": "Locations",
+          "User_questions": ["important locations in ReZero", "ReZero locations"],
+          "Answer_chat": ["Lugnica Kingdom, Roswaal Manor, Sanctuary, Capital City"]
+        },
+        {
+          "class": "Worlds",
+          "User_questions": ["ReZero universe", "ReZero worlds"],
+          "Answer_chat": ["Fantasy parallel world with magic, demons, and royal kingdoms"]
+        },
+        {
+          "class": "Arcs",
+          "User_questions": ["ReZero story arcs", "ReZero arcs"],
+          "Answer_chat": ["Prologue, Return by Death, Sanctuary, Arc 3, Arc 4"]
+        },
+        {
+          "class": "Status",
+          "User_questions": ["is ReZero finished", "ReZero status"],
+          "Answer_chat": ["Anime ongoing; manga ongoing."]
+        }
+      ]
+    },
+    {
+      "Akame ga Kill": [
+        {
+          "class": "Definition",
+          "User_questions": ["Akame ga Kill", "what is Akame ga Kill", "tell me about Akame ga Kill"],
+          "Answer_chat": ["Akame ga Kill is a Japanese manga and anime series about assassins fighting against a corrupt empire."]
+        },
+        {
+          "class": "Main Characters",
+          "User_questions": ["who are Akame ga Kill main characters", "Akame ga Kill heroes"],
+          "Answer_chat": ["Akame, Tatsumi, Mine, Leone, Sheele"]
+        },
+        {
+          "class": "Supporting Characters",
+          "User_questions": ["who are Akame ga Kill side characters", "Akame ga Kill supporting cast"],
+          "Answer_chat": ["Bulat, Susanoo, Najenda, Esdeath, Chelsea"]
+        },
+        {
+          "class": "Locations",
+          "User_questions": ["important locations in Akame ga Kill", "Akame ga Kill locations"],
+          "Answer_chat": ["Capital City, Night Raid Hideout, Esdeath Fortress"]
+        },
+        {
+          "class": "Worlds",
+          "User_questions": ["Akame ga Kill universe", "Akame ga Kill worlds"],
+          "Answer_chat": ["Fantasy world under a corrupt empire with assassins and warriors"]
+        },
+        {
+          "class": "Arcs",
+          "User_questions": ["Akame ga Kill story arcs", "Akame ga Kill arcs"],
+          "Answer_chat": ["Tatsumi joins Night Raid, Empire Confrontation, Esdeath Battle, Final War"]
+        },
+        {
+          "class": "Status",
+          "User_questions": ["is Akame ga Kill finished", "Akame ga Kill status"],
+          "Answer_chat": ["Anime complete; manga complete."]
+        }
+      ]
+    },
+    {
+      "Hellsing": [
+        {
+          "class": "Definition",
+          "User_questions": ["Hellsing", "what is Hellsing", "tell me about Hellsing"],
+          "Answer_chat": ["Hellsing is a Japanese manga and anime series about Alucard, a powerful vampire working for the Hellsing Organization to protect England from supernatural threats."]
+        },
+        {
+          "class": "Main Characters",
+          "User_questions": ["who are Hellsing main characters", "Hellsing heroes"],
+          "Answer_chat": ["Alucard, Seras Victoria, Integra Hellsing"]
+        },
+        {
+          "class": "Supporting Characters",
+          "User_questions": ["who are Hellsing side characters", "Hellsing supporting cast"],
+          "Answer_chat": ["Walter C. Dornez, Alexander Anderson, Pip Bernadotte"]
+        },
+        {
+          "class": "Locations",
+          "User_questions": ["important locations in Hellsing", "Hellsing locations"],
+          "Answer_chat": ["London, Hellsing Organization HQ, Gorgon headquarters"]
+        },
+        {
+          "class": "Worlds",
+          "User_questions": ["Hellsing universe", "Hellsing worlds"],
+          "Answer_chat": ["Modern-day England with vampires, ghouls, and secret organizations"]
+        },
+        {
+          "class": "Arcs",
+          "User_questions": ["Hellsing story arcs", "Hellsing arcs"],
+          "Answer_chat": ["Millennium Incident, Vampire Invasion, Final Confrontation"]
+        },
+        {
+          "class": "Status",
+          "User_questions": ["is Hellsing finished", "Hellsing status"],
+          "Answer_chat": ["Anime complete; manga complete."]
+        }
+      ]
+    },
+    {
+      "Parasyte": [
+        {
+          "class": "Definition",
+          "User_questions": ["Parasyte", "what is Parasyte", "tell me about Parasyte"],
+          "Answer_chat": ["Parasyte is a Japanese manga and anime series about Shinichi Izumi, who battles parasitic aliens that take over human bodies."]
+        },
+        
+        {
+          "class": "Main Characters",
+          "User_questions": ["who are Parasyte main characters", "Parasyte heroes"],
+          "Answer_chat": ["Shinichi Izumi, Migi"]
+        },
+        {
+          "class": "Supporting Characters",
+          "User_questions": ["who are Parasyte side characters", "Parasyte supporting cast"],
+          "Answer_chat": ["Satomi Murano, Reiko Tamura, Kana Kimishima"]
+        },
+        {
+          "class": "Locations",
+          "User_questions": ["important locations in Parasyte", "Parasyte locations"],
+          "Answer_chat": ["Tokyo, Shinichi’s home, School, Urban Streets"]
+        },
+        {
+          "class": "Worlds",
+          "User_questions": ["Parasyte universe", "Parasyte worlds"],
+          "Answer_chat": ["Modern Earth invaded by parasitic aliens"]
+        },
+        {
+          "class": "Arcs",
+          "User_questions": ["Parasyte story arcs", "Parasyte arcs"],
+          "Answer_chat": ["Parasitic invasion, Shinichi adaptation, Final Battle"]
+        },
+        {
+          "class": "Status",
+          "User_questions": ["is Parasyte finished", "Parasyte status"],
+          "Answer_chat": ["Anime complete; manga complete."]
+        }
+      ]
+    },
+    {
+      "Katekyo Hitman Reborn": [
+        {
+          "class": "Definition",
+          "User_questions": ["Katekyo Hitman Reborn", "what is Reborn", "tell me about Reborn"],
+          "Answer_chat": ["Katekyo Hitman Reborn is a Japanese manga and anime series about Tsuna Sawada, a boy who discovers he is the heir to a mafia family and must become a strong leader."]
+        },
+        {
+          "class": "Main Characters",
+          "User_questions": ["who are Reborn main characters", "Reborn heroes"],
+          "Answer_chat": ["Tsuna Sawada, Reborn, Gokudera Hayato, Yamamoto Takeshi, Hibari Kyoya"]
+        },
+        {
+          "class": "Supporting Characters",
+          "User_questions": ["who are Reborn side characters", "Reborn supporting cast"],
+          "Answer_chat": ["Lambo, Chrome Dokuro, Ryohei, Kyoko Sasagawa"]
+        },
+        {
+          "class": "Locations",
+          "User_questions": ["important locations in Reborn", "Reborn locations"],
+          "Answer_chat": ["Japan, Mafia Headquarters, Namimori School, Kokuyo Gang territories"]
+        },
+        {
+          "class": "Worlds",
+          "User_questions": ["Reborn universe", "Reborn worlds"],
+          "Answer_chat": ["Modern Japan with mafia elements and supernatural powers"]
+        },
+        {
+          "class": "Arcs",
+          "User_questions": ["Reborn story arcs", "Reborn arcs"],
+          "Answer_chat": ["Future Arc, Varia Arc, Simon Arc, Millefiore Arc, Inheritance Arc"]
+        },
+        {
+          "class": "Status",
+          "User_questions": ["is Reborn finished", "Reborn status"],
+          "Answer_chat": ["Anime complete; manga complete."]
+        }
+      ]
+    },
+    {
+      "Erased": [
+        {
+          "class": "Definition",
+          "User_questions": ["Erased", "what is Erased", "tell me about Erased"],
+          "Answer_chat": ["Erased is a Japanese manga and anime series about Satoru Fujinuma, who travels back in time to prevent tragedies and solve mysteries from his childhood."]
+        },
+        {
+          "class": "Main Characters",
+          "User_questions": ["who are Erased main characters", "Erased heroes"],
+          "Answer_chat": ["Satoru Fujinuma, Kayo Hinazuki, Airi Katagiri"]
+        },
+        {
+          "class": "Supporting Characters",
+          "User_questions": ["who are Erased side characters", "Erased supporting cast"],
+          "Answer_chat": ["Hiromi Sugita, Kenya Kobayashi, Sachiko Fujinuma"]
+        },
+        {
+          "class": "Locations",
+          "User_questions": ["important locations in Erased", "Erased locations"],
+          "Answer_chat": ["Hokkaido, Satoru’s House, School, Kayo’s Home"]
+        },
+        {
+          "class": "Worlds",
+          "User_questions": ["Erased universe", "Erased worlds"],
+          "Answer_chat": ["Modern Japan with time-travel elements"]
+        },
+        {
+          "class": "Arcs",
+          "User_questions": ["Erased story arcs", "Erased arcs"],
+          "Answer_chat": ["Childhood Murder Investigation, Time Travel to 1988, Solving the Case"]
+        },
+        {
+          "class": "Status",
+          "User_questions": ["is Erased finished", "Erased status"],
+          "Answer_chat": ["Anime complete; manga complete."]
+        }
+      ]
+    },
+    {
+      "Blue Exorcist": [
+        {
+          "class": "Definition",
+          "User_questions": ["Blue Exorcist", "what is Blue Exorcist", "tell me about Blue Exorcist"],
+          "Answer_chat": ["Blue Exorcist is a Japanese manga and anime series about Rin Okumura, a teenager who discovers he is the son of Satan and trains to become an exorcist to fight demons."]
+        },
+       
+        {
+          "class": "Main Characters",
+          "User_questions": ["who are Blue Exorcist main characters", "Blue Exorcist heroes"],
+          "Answer_chat": ["Rin Okumura, Yukio Okumura, Shiemi Moriyama, Shura Kirigakure"]
+        },
+        {
+          "class": "Supporting Characters",
+          "User_questions": ["who are Blue Exorcist side characters", "Blue Exorcist supporting cast"],
+          "Answer_chat": ["Izumo Kamiki, Renzou Shima, Mephisto Pheles"]
+        },
+        {
+          "class": "Locations",
+          "User_questions": ["important locations in Blue Exorcist", "Blue Exorcist locations"],
+          "Answer_chat": ["True Cross Academy, Tokyo, Shinjuku, Assiah"]
+        },
+        {
+          "class": "Worlds",
+          "User_questions": ["Blue Exorcist universe", "Blue Exorcist worlds"],
+          "Answer_chat": ["Modern Japan with demons and exorcists"]
+        },
+        {
+          "class": "Arcs",
+          "User_questions": ["Blue Exorcist story arcs", "Blue Exorcist arcs"],
+          "Answer_chat": ["Exorcist Exam Arc, Impure King Arc, Kyoto Impure King Arc"]
+        },
+        {
+          "class": "Status",
+          "User_questions": ["is Blue Exorcist finished", "Blue Exorcist status"],
+          "Answer_chat": ["Anime ongoing; manga ongoing."]
+        }
+      ]
+    },
+    {
+    
+      "Gintama": [
+        {
+    "class": "Definition",
+    "User_questions": ["Gintama", "what is Gintama"],
+    "Answer_chat": [
+      "Gintama is a Japanese anime and manga series set in an alternate-history Edo period where aliens, called Amanto, have invaded Earth. It follows Gintoki Sakata, a samurai who does odd jobs with his friends Shinpachi and Kagura."
+    ]
+  },
+        {
+          "class": "Main Characters",
+          "User_questions": ["who are Gintama main characters", "Gintama heroes"],
+          "Answer_chat": ["Gintoki Sakata, Shinpachi Shimura, Kagura, Sadaharu"]
+        },
+        {
+          "class": "Supporting Characters",
+          "User_questions": ["who are Gintama side characters", "Gintama supporting cast"],
+          "Answer_chat": ["Tae Shimura, Katsura Kotarou, Hijikata Toshiro, Okita Sougo"]
+        },
+        {
+          "class": "Locations",
+          "User_questions": ["important locations in Gintama", "Gintama locations"],
+          "Answer_chat": ["Edo, Yorozuya Office, Kabukicho, Shogun Palace"]
+        },
+        {
+          "class": "Worlds",
+          "User_questions": ["Gintama universe", "Gintama worlds"],
+          "Answer_chat": ["Alternate Edo with aliens, samurais, and comedic chaos"]
+        },
+        {
+          "class": "Arcs",
+          "User_questions": ["Gintama story arcs", "Gintama arcs"],
+          "Answer_chat": ["Benizakura Arc, Shogun Assassination Arc, Farewell Shinsengumi Arc"]
+        },
+        {
+          "class": "Status",
+          "User_questions": ["is Gintama finished", "Gintama status"],
+          "Answer_chat": ["Anime complete; manga finished."]
+        }
+      ]
+    },
+    {
+      "The Rising of the Shield Hero": [
+        {
+          "class": "Definition",
+          "User_questions": ["The Rising of the Shield Hero", "what is The Rising of the Shield Hero", "tell me about The Rising of the Shield Hero"],
+          "Answer_chat": ["The Rising of the Shield Hero is a Japanese light novel, manga, and anime series about Naofumi Iwatani, who is summoned to another world as the Shield Hero and must fight waves of monsters to protect the kingdom."]
+        },
+        {
+          "class": "Main Characters",
+          "User_questions": ["who are Shield Hero main characters", "Shield Hero heroes"],
+          "Answer_chat": ["Naofumi Iwatani, Raphtalia, Filo, Melty Q Melromarc"]
+        },
+        {
+          "class": "Supporting Characters",
+          "User_questions": ["who are Shield Hero side characters", "Shield Hero supporting cast"],
+          "Answer_chat": ["Motoyasu Kitamura, Ren Amaki, Itsuki Kawasumi, Myne Sophia"]
+        },
+        {
+          "class": "Locations",
+          "User_questions": ["important locations in Shield Hero", "Shield Hero locations"],
+          "Answer_chat": ["Melromarc Kingdom, Waves Battlefields, Forest, Capital"]
+        },
+        {
+          "class": "Worlds",
+          "User_questions": ["Shield Hero universe", "Shield Hero worlds"],
+          "Answer_chat": ["Fantasy world with waves of monsters and heroes summoned from another world"]
+        },
+        {
+          "class": "Arcs",
+          "User_questions": ["Shield Hero story arcs", "Shield Hero arcs"],
+          "Answer_chat": ["Summoning, Raphtalia’s Growth, Wave Battles, Motoyasu Confrontation, Final Wave"]
+        },
+        {
+          "class": "Status",
+          "User_questions": ["is Shield Hero finished", "Shield Hero status"],
+          "Answer_chat": ["Anime ongoing; light novel ongoing."]
+        }
+      ]
+    },
+    {
+      "No Game No Life": [
+        {
+          "class": "Definition",
+          "User_questions": ["No Game No Life", "what is No Game No Life", "tell me about No Game No Life"],
+          "Answer_chat": ["No Game No Life is a Japanese light novel, manga, and anime series about siblings Sora and Shiro, who are transported to a fantasy world where all conflicts are resolved through games."]
+        },
+        {
+          "class": "Main Characters",
+          "User_questions": ["who are NGNL main characters", "No Game No Life heroes"],
+          "Answer_chat": ["Sora, Shiro, Stephanie Dola, Jibril"]
+        },
+        {
+          "class": "Supporting Characters",
+          "User_questions": ["who are NGNL side characters", "No Game No Life supporting cast"],
+          "Answer_chat": ["Tet, Izuna Hatsuse, Kurami Zell, Fil Nilvalen"]
+        },
+        {
+          "class": "Locations",
+          "User_questions": ["important locations in NGNL", "No Game No Life locations"],
+          "Answer_chat": ["Disboard, Elkia Kingdom, Eastern Federation, Kurami’s Territory"]
+        },
+        {
+          "class": "Worlds",
+          "User_questions": ["NGNL universe", "No Game No Life worlds"],
+          "Answer_chat": ["Fantasy game world where everything is decided by games"]
+        },
+        {
+          "class": "Arcs",
+          "User_questions": ["NGNL story arcs", "No Game No Life arcs"],
+          "Answer_chat": ["Arrival in Disboard, Eastern Federation, Flugel Confrontation, Strategy Battles"]
+        },
+        {
+          "class": "Status",
+          "User_questions": ["is NGNL finished", "No Game No Life status"],
+          "Answer_chat": ["Anime complete; light novel ongoing."]
+        }
+      ]
+    },
+    {
+      "Overlord": [
+        {
+          "class": "Definition",
+          "User_questions": ["Overlord", "what is Overlord", "tell me about Overlord"],
+          "Answer_chat": ["Overlord is a Japanese light novel, manga, and anime series about Ainz Ooal Gown, a player trapped in a virtual reality game who becomes the powerful overlord of a fantasy world."]
+        },
+        {
+          "class": "Main Characters",
+          "User_questions": ["who are Overlord main characters", "Overlord heroes"],
+          "Answer_chat": ["Ainz Ooal Gown, Albedo, Shalltear Bloodfallen, Demiurge, Cocytus"]
+        },
+        {
+          "class": "Supporting Characters",
+          "User_questions": ["who are Overlord side characters", "Overlord supporting cast"],
+          "Answer_chat": ["Mare Bello Fiore, Aura Bella Fiora, Sebas Tian"]
+        },
+        {
+          "class": "Locations",
+          "User_questions": ["important locations in Overlord", "Overlord locations"],
+          "Answer_chat": ["The Great Tomb of Nazarick, E-Rantel, Re-Estize Kingdom"]
+        },
+        {
+          "class": "Worlds",
+          "User_questions": ["Overlord universe", "Overlord worlds"],
+          "Answer_chat": ["Virtual Yggdrasil world merged with real fantasy world"]
+        },
+        {
+          "class": "Arcs",
+          "User_questions": ["Overlord story arcs", "Overlord arcs"],
+          "Answer_chat": ["Nazarick Expansion, Kingdom Conquest, Demiurge Strategy, Elf Village"]
+        },
+        {
+          "class": "Status",
+          "User_questions": ["is Overlord finished", "Overlord status"],
+          "Answer_chat": ["Anime ongoing; light novel ongoing."]
+        }
+      ]
+    },
+    
+    {
+      "Barakamon": [
+        {
+          "class": "Definition",
+          "User_questions": ["Barakamon", "what is Barakamon", "tell me about Barakamon"],
+          "Answer_chat": ["Barakamon is a Japanese manga and anime series about Seishuu Handa, a calligrapher who moves to a rural island and learns about life and art from the villagers."]
+        },
+        {
+          "class": "Main Characters",
+          "User_questions": ["who are Barakamon main characters", "Barakamon heroes"],
+          "Answer_chat": ["Seishuu Handa, Naru Kotoishi"]
+        },
+        {
+          "class": "Supporting Characters",
+          "User_questions": ["who are Barakamon side characters", "Barakamon supporting cast"],
+          "Answer_chat": ["Hiroshi Kotoishi, Miwa Yamamura"]
+        },
+        {
+          "class": "Locations",
+          "User_questions": ["important locations in Barakamon", "Barakamon locations"],
+          "Answer_chat": ["Gotou Islands, Handa’s House, Village School"]
+        },
+        {
+          "class": "Worlds",
+          "User_questions": ["Barakamon universe", "Barakamon worlds"],
+          "Answer_chat": ["Modern Japan, rural island life"]
+        },
+        {
+          "class": "Arcs",
+          "User_questions": ["Barakamon story arcs", "Barakamon arcs"],
+          "Answer_chat": ["Arrival at Island, Village Life, Calligraphy Growth"]
+        },
+        {
+          "class": "Status",
+          "User_questions": ["is Barakamon finished", "Barakamon status"],
+          "Answer_chat": ["Anime complete; manga complete."]
+        }
+      ]
+    },
+    {
+      "Ping Pong The Animation": [
+        {
+          "class": "Definition",
+          "User_questions": ["Ping Pong The Animation", "what is Ping Pong The Animation", "tell me about Ping Pong The Animation"],
+          "Answer_chat": ["Ping Pong The Animation is a Japanese anime series about competitive table tennis, focusing on the friendship and rivalry between talented players."]
+        },
+        {
+          "class": "Main Characters",
+          "User_questions": ["who are Ping Pong main characters", "Ping Pong heroes"],
+          "Answer_chat": ["Peco, Smile, Kong Wenge, Dragon"]
+        },
+        {
+          "class": "Supporting Characters",
+          "User_questions": ["who are Ping Pong side characters", "Ping Pong supporting cast"],
+          "Answer_chat": ["Coach, Ryuichi, Amateur Players"]
+        },
+        {
+          "class": "Locations",
+          "User_questions": ["important locations in Ping Pong", "Ping Pong locations"],
+          "Answer_chat": ["Table Tennis Club, Tournament Arena, School Gym"]
+        },
+        {
+          "class": "Worlds",
+          "User_questions": ["Ping Pong universe", "Ping Pong worlds"],
+          "Answer_chat": ["Realistic Japan focused on competitive table tennis"]
+        },
+        {
+          "class": "Arcs",
+          "User_questions": ["Ping Pong story arcs", "Ping Pong arcs"],
+          "Answer_chat": ["Training, Regional Tournament, National Tournament, Growth"]
+        },
+        {
+          "class": "Status",
+          "User_questions": ["is Ping Pong finished", "Ping Pong status"],
+          "Answer_chat": ["Anime finished; manga finished."]
+        }
+      ]
+    },
+    {
+      "Anohana": [
+        {
+          "class": "Definition",
+          "User_questions": ["Anohana", "what is Anohana", "tell me about Anohana"],
+          "Answer_chat": ["Anohana is a Japanese anime series about a group of childhood friends who reunite to help the spirit of their deceased friend find peace."]
+        },
+        {
+          "class": "Main Characters",
+          "User_questions": ["who are Anohana main characters", "Anohana heroes"],
+          "Answer_chat": ["Jinta Yadomi, Meiko 'Menma' Honma, Naruko Anjou, Atsumu Matsuyuki"]
+        },
+        {
+          "class": "Supporting Characters",
+          "User_questions": ["who are Anohana side characters", "Anohana supporting cast"],
+          "Answer_chat": ["Tetsudo Hisakawa, Chiriko Tsurumi"]
+        },
+        {
+          "class": "Locations",
+          "User_questions": ["important locations in Anohana", "Anohana locations"],
+          "Answer_chat": ["Childhood Town, Forest Hideout, Beach"]
+        },
+        {
+          "class": "Worlds",
+          "User_questions": ["Anohana universe", "Anohana worlds"],
+          "Answer_chat": ["Realistic modern Japan with emotional supernatural elements"]
+        },
+        {
+          "class": "Arcs",
+          "User_questions": ["Anohana story arcs", "Anohana arcs"],
+          "Answer_chat": ["Childhood Memories, Reunion, Confession, Goodbye Menma"]
+        },
+        {
+          "class": "Status",
+          "User_questions": ["is Anohana finished", "Anohana status"],
+          "Answer_chat": ["Anime finished; manga finished."]
+        }
+      ]
+    },
+    {
+      "Shouwa Genroku Rakugo Shinjuu": [
+        {
+          "class": "Definition",
+          "User_questions": ["Shouwa Genroku Rakugo Shinjuu", "what is Rakugo Shinjuu", "tell me about Rakugo Shinjuu"],
+          "Answer_chat": ["Shouwa Genroku Rakugo Shinjuu is a Japanese anime series about the art of Rakugo storytelling, following the lives and struggles of performers across generations."]
+        },
+        {
+          "class": "Main Characters",
+          "User_questions": ["who are Rakugo Shinjuu main characters", "Rakugo Shinjuu heroes"],
+          "Answer_chat": ["Yakumo Yurakutei, Sukeroku, Konatsu"]
+        },
+        {
+          "class": "Supporting Characters",
+          "User_questions": ["who are Rakugo Shinjuu side characters", "Rakugo Shinjuu supporting cast"],
+          "Answer_chat": ["Takasuke, Miyokichi, Yotaro"]
+        },
+        {
+          "class": "Locations",
+          "User_questions": ["important locations in Rakugo Shinjuu", "Rakugo Shinjuu locations"],
+          "Answer_chat": ["Rakugo Theater, Edo, Modern Tokyo"]
+        },
+        {
+          "class": "Worlds",
+          "User_questions": ["Rakugo Shinjuu universe", "Rakugo Shinjuu worlds"],
+          "Answer_chat": ["Historical Japan spanning Shouwa era with Rakugo art"]
+        },
+        {
+          "class": "Arcs",
+          "User_questions": ["Rakugo Shinjuu story arcs", "Rakugo Shinjuu arcs"],
+          "Answer_chat": ["Yakumo’s Journey, Sukeroku’s Return, Konatsu’s Struggle"]
+        },
+        {
+          "class": "Status",
+          "User_questions": ["is Rakugo Shinjuu finished", "Rakugo Shinjuu status"],
+          "Answer_chat": ["Anime finished; manga finished."]
+        }
+      ]
+    }
+  ]
+}
