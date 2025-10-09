@@ -145,11 +145,22 @@ K-Neighbors
 - Pickle (لحفظ الـ Tokenizer و Label Encoders)
 
 ## كيفية التشغيل
-1. استنساخ المشروع:
+## مشروع معالجة النصوص المتعدد المهام (Multi-Task NLP)
+
+هذا المشروع يعتمد على **التعلم العميق (Deep Learning)** لمعالجة النصوص، ويقوم بعدة مهام في نفس الوقت باستخدام موديل واحد:
+
+- تصنيف النصوص (**Summary / Label**)  
+- تصنيف الموضوع (**Topic**)  
+- تصنيف المشاعر (**Sentiment**)  
+- التعرف على الكيانات المسماة (**NER – Named Entity Recognition**)  
+
+---
+
+## 1️⃣ المتطلبات
+
+قبل تشغيل المشروع، تأكد من تثبيت الحزم التالية:
+
 ```bash
-git clone https://github.com/اسم_المستخدم/اسم_المشروع.git
-
-
 ## مشروع معالجة النصوص المتعدد المهام (Multi-Task NLP)
 
 هذا المشروع يعتمد على **التعلم العميق (Deep Learning)** لمعالجة النصوص، ويقوم بعدة مهام في نفس الوقت باستخدام موديل واحد:
@@ -184,21 +195,10 @@ pip install pandas scikit-learn tensorflow numpy
 
 ```bash
 pip install pandas scikit-learn tensorflow numpy
-# مشروع معالجة النصوص المتعدد المهام (Multi-Task NLP)
-
-هذا المشروع يعتمد على **التعلم العميق (Deep Learning)** لمعالجة النصوص، ويقوم بعدة مهام في نفس الوقت باستخدام موديل واحد:
-
-- تصنيف النصوص (**Summary / Label**)  
-- تصنيف الموضوع (**Topic**)  
-- تصنيف المشاعر (**Sentiment**)  
-- التعرف على الكيانات المسماة (**NER – Named Entity Recognition**)  
-
----
-
-## 1️⃣ المتطلبات
-
-قبل تشغيل المشروع، تأكد من تثبيت الحزم التالية:
-
+1. استنساخ المشروع:
 ```bash
-pip install pandas scikit-learn tensorflow numpy
+git clone https://github.com/اسم_المستخدم/اسم_المشروع.git
+
+
+
 
