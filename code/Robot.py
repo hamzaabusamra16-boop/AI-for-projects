@@ -35,40 +35,46 @@ class Robot:
         return penalty
 
     def a_star(self, goal, dynamic_obstacles=set()):
-        """
-        البحث عن المسار باستخدام A* مع تطبيق التكلفة الديناميكية.
-        """
-        # دمج العقبات الديناميكية في مجموعة واحدة لحساب التكلفة
-        all_dynamic_objects = dynamic_obstacles.union({self.pos}) 
-        
-        ROWS, COLS = self.grid.shape
-        open_set = []
-        # (f_cost, g_cost, current_pos, path)
-        heapq.heappush(open_set, (0+self.heuristic(self.pos, goal), 0, self.pos, [self.pos]))
-        visited = set([self.pos])
+            """
+            البحث عن المسار باستخدام A* مع تطبيق التكلفة الديناميكية.
+            """
+            # دمج العقبات الديناميكية في مجموعة واحدة لحساب التكلفة
+            # (يتم استخدامها لحساب العقوبة، وليس للحظر المطلق)
+            all_dynamic_objects = dynamic_obstacles.union({self.pos}) 
+            
+            ROWS, COLS = self.grid.shape
+            open_set = []
+            heapq.heappush(open_set, (0+self.heuristic(self.pos, goal), 0, self.pos, [self.pos]))
+            visited = set([self.pos])
 
-        while open_set:
-            _, cost, current, path = heapq.heappop(open_set)
-            if current == goal:
-                return path
-            x, y = current
-            for dx, dy in [(-1,0),(1,0),(0,-1),(0,1)]:
-                nx, ny = x+dx, y+dy
-                next_pos = (nx, ny)
-                
-                # التحقق من الحدود والعقبات الثابتة (1)
-                if (0<=nx<COLS and 0<=ny<ROWS and self.grid[ny,nx] != 1
-                    and next_pos not in visited):
+            while open_set:
+                _, cost, current, path = heapq.heappop(open_set)
+                if current == goal:
+                    return path
+                x, y = current
+                for dx, dy in [(-1,0),(1,0),(0,-1),(0,1)]:
+                    nx, ny = x+dx, y+dy
+                    next_pos = (nx, ny)
                     
-                    # 🚀 تطبيق التكلفة الديناميكية هنا:
-                    dynamic_penalty = self.calculate_dynamic_cost(next_pos, all_dynamic_objects)
-                    
-                    # التكلفة الجديدة = التكلفة القديمة + 1 (تكلفة الخطوة) + عقوبة الازدحام
-                    new_cost = cost + 1 + dynamic_penalty
-                    
-                    heapq.heappush(open_set, (new_cost+self.heuristic(next_pos, goal), new_cost, next_pos, path+[next_pos]))
-                    visited.add(next_pos)
-        return [self.pos]
+                    # ✅ التعديل الأول: إزالة next_pos not in dynamic_obstacles
+                    # نترك فقط فحص الحدود والعقبات الثابتة (1)
+                    if (0<=nx<COLS and 0<=ny<ROWS and self.grid[ny,nx] != 1
+                        and next_pos not in visited):
+                        
+                        # 🚀 تطبيق التكلفة الديناميكية هنا:
+                        dynamic_penalty = self.calculate_dynamic_cost(next_pos, all_dynamic_objects)
+                        
+                        # ✅ التعديل الثاني: عقوبة عالية جداً إذا كانت النقطة محتلة حالياً
+                        # هذا يجعل A* يفضل المسارات البديلة الطويلة قبل المرور بهذه النقطة.
+                        if next_pos in all_dynamic_objects:
+                            dynamic_penalty += 1000 # عقوبة عالية جداً (للتجنب وليس للحظر)
+                            
+                        # التكلفة الجديدة = التكلفة القديمة + 1 (تكلفة الخطوة) + عقوبة الازدحام
+                        new_cost = cost + 1 + dynamic_penalty
+                        
+                        heapq.heappush(open_set, (new_cost+self.heuristic(next_pos, goal), new_cost, next_pos, path+[next_pos]))
+                        visited.add(next_pos)
+            return [self.pos]
 
     def move_to(self, goal, draw_callback=None, delay=0.5, dynamic_obstacles=set(), traffic_signals={}):
         """
