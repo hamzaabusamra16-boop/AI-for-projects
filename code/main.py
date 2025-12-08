@@ -6,8 +6,11 @@ import time
 import random
 from User import DeliveryQueue, DeliveryRequest
 
-ROWS, COLS = 20, 20
-grid = np.array([
+ROWS, COLS = 30, 30
+# =======================================================
+
+# 📌 بناء الخريطة المعقدة 30x30 بتكرار النمط
+original_grid_20x20 = np.array([
     [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
     [1,0,0,0,4,0,0,3,0,0,0,2,0,0,0,0,4,0,0,1],
     [1,0,1,2,1,0,1,0,0,1,0,0,0,1,2,0,1,0,0,1],
@@ -30,9 +33,19 @@ grid = np.array([
     [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
 ])
 
-restaurants = [(1,1), (18,1), (1,18)]
-robot = Robot(start_pos=restaurants[0], grid=grid)
+grid = np.ones((ROWS, COLS), dtype=int)
+original_inner = original_grid_20x20[1:19, 1:19] 
+inner_size = original_inner.shape[0] # 18
 
+# تكرار النمط لملء الخريطة
+grid[1:1+inner_size, 1:1+inner_size] = original_inner # الربع العلوي الأيسر
+grid[1:1+inner_size, COLS - inner_size - 1:COLS - 1] = original_inner # الربع العلوي الأيمن
+grid[ROWS - inner_size - 1:ROWS - 1, 1:1+inner_size] = original_inner # الربع السفلي الأيسر
+grid[ROWS - inner_size - 1:ROWS - 1, COLS - inner_size - 1:COLS - 1] = original_inner # الربع السفلي الأيمن
+
+# نقاط المطاعم الجديدة (في الزوايا)
+restaurants = [(1,1), (28,1), (1,28), (28,28), (14, 14)] 
+robot = Robot(start_pos=restaurants[0], grid=grid)
 # -------- إشارات المرور (تعديل 1: تقسيم المجموعات) --------
 traffic_signals = {}
 signal_positions = []
@@ -83,7 +96,7 @@ def update_traffic_signals():
 
 # -------- سيارات مع مسار محدد (كما هي، لكن منطق التحديث معدل) --------
 cars = []
-for _ in range(5):
+for _ in range(30):
     while True:
         x, y = random.randint(1,COLS-2), random.randint(1,ROWS-2)
         if grid[y,x]==0:
@@ -131,7 +144,7 @@ def update_cars():
 
 # -------- أشخاص مع هدف عشوائي (كما هي) --------
 people = []
-for _ in range(10):
+for _ in range(50):
     while True:
         x, y = random.randint(1,COLS-2), random.randint(1,ROWS-2)
         if grid[y,x]==0:
