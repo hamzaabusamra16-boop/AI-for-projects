@@ -1,17 +1,38 @@
 import numpy as np
-import matplotlib.pyplot as plt
-from collections import deque
-# يجب التأكد من أن كود Robot.py المعدل موجود في ملف Robot.py
-from Robot import Robot 
+import pygame
 import time
 import random
-# تأكد من أن كلاسات DeliveryQueue, DeliveryRequest موجودة في ملف User.py
+
+# تأكد أن هذين الملفين موجودان ومحدثان (Robot.py و User.py)
+from Robot import Robot 
 from User import DeliveryQueue, DeliveryRequest 
 
-ROWS, COLS = 30, 30
+# =======================================================
+# ⚙️ إعدادات Pygame و الأبعاد
 # =======================================================
 
-# 📌 بناء الخريطة المعقدة 30x30 بتكرار النمط
+ROWS, COLS = 30, 30
+TILE_SIZE = 25 # حجم كل مربع بالبكسل
+WIDTH = COLS * TILE_SIZE
+HEIGHT = ROWS * TILE_SIZE
+
+# تعريف الألوان (تم إضافة GREEN)
+WHITE = (255, 255, 255)
+BLACK = (0, 0, 0)
+GRAY = (128, 128, 128)
+LIGHT_GREEN = (144, 238, 144)
+DARK_GREEN = (0, 100, 0)
+BLUE = (0, 0, 255)
+RED = (255, 0, 0)
+ORANGE = (255, 165, 0)
+PINK = (255, 192, 203)
+YELLOW = (255, 255, 0)
+GREEN = (0, 255, 0) # ✅ تم إضافة اللون الأخضر لحل المشكلة
+
+# =======================================================
+# 🗺️ بناء الخريطة (كما هو)
+# =======================================================
+
 original_grid_20x20 = np.array([
     [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
     [1,0,0,0,4,0,0,3,0,0,0,2,0,0,0,0,4,0,0,1],
@@ -39,16 +60,15 @@ grid = np.ones((ROWS, COLS), dtype=int)
 original_inner = original_grid_20x20[1:19, 1:19] 
 inner_size = original_inner.shape[0] # 18
 
-# تكرار النمط لملء الخريطة
-grid[1:1+inner_size, 1:1+inner_size] = original_inner # الربع العلوي الأيسر
-grid[1:1+inner_size, COLS - inner_size - 1:COLS - 1] = original_inner # الربع العلوي الأيمن
-grid[ROWS - inner_size - 1:ROWS - 1, 1:1+inner_size] = original_inner # الربع السفلي الأيسر
-grid[ROWS - inner_size - 1:ROWS - 1, COLS - inner_size - 1:COLS - 1] = original_inner # الربع السفلي الأيمن
+grid[1:1+inner_size, 1:1+inner_size] = original_inner 
+grid[1:1+inner_size, COLS - inner_size - 1:COLS - 1] = original_inner 
+grid[ROWS - inner_size - 1:ROWS - 1, 1:1+inner_size] = original_inner 
+grid[ROWS - inner_size - 1:ROWS - 1, COLS - inner_size - 1:COLS - 1] = original_inner 
 
-# نقاط المطاعم الجديدة (في الزوايا)
 restaurants = [(1,1), (28,1), (1,28), (28,28), (14, 14)] 
 robot = Robot(start_pos=restaurants[0], grid=grid)
-# -------- إشارات المرور (تعديل 1: تقسيم المجموعات) --------
+
+# -------- إشارات المرور --------
 traffic_signals = {}
 signal_positions = []
 for y in range(ROWS):
@@ -57,36 +77,31 @@ for y in range(ROWS):
             traffic_signals[(x,y)] = 'red'
             signal_positions.append((x,y))
 
-# تقسيم الإشارات إلى مجموعات لواقعية أكبر في التناوب (تقاطعات أفقية ورأسية)
 signal_groups = {
     'group_A': [pos for i, pos in enumerate(signal_positions) if i % 2 == 0],
     'group_B': [pos for i, pos in enumerate(signal_positions) if i % 2 != 0]
 }
 
-# الحالة الابتدائية: مجموعة خضراء ومجموعة حمراء
 current_active_group = 'group_A'
 for pos in signal_groups['group_A']: traffic_signals[pos] = 'green'
 for pos in signal_groups['group_B']: traffic_signals[pos] = 'red'
 
-# 🚦 التعديل المطلوب: تغيير الإشارة كل 5 خطوات محاكاة
 signal_timer = 0
 SIGNAL_CYCLE = 5 
 
 def update_traffic_signals():
-    """تناوب واقعي للإشارات بين مجموعتين."""
+    """تناوب الإشارات"""
     global signal_timer, current_active_group
     signal_timer += 1
     
     if signal_timer >= SIGNAL_CYCLE:
         signal_timer = 0
         
-        # تبديل المجموعة النشطة
         if current_active_group == 'group_A':
             current_active_group = 'group_B'
         else:
             current_active_group = 'group_A'
             
-        # تحديث الحالات
         inactive_group = 'group_A' if current_active_group == 'group_B' else 'group_B'
 
         for pos in signal_groups[current_active_group]:
@@ -96,7 +111,7 @@ def update_traffic_signals():
             
         print(f"🚦 Traffic signals switched. {current_active_group} is GREEN.")
 
-# -------- سيارات مع مسار محدد --------
+# -------- سيارات --------
 cars = []
 for _ in range(30):
     while True:
@@ -106,15 +121,13 @@ for _ in range(30):
             break
 
 def update_cars():
-    """تحسين حركة السيارات لتجنب الاصطدام."""
+    """حركة السيارات"""
     current_occupancies = {tuple(c['pos']) for c in cars}
     current_occupancies.update({tuple(p['pos']) for p in people})
 
     for car in cars:
         cx, cy = car['pos']
-        
         preferred_dx, preferred_dy = car['dir']
-        
         directions = [(preferred_dx, preferred_dy)]
         other_directions = [d for d in [(-1,0),(1,0),(0,-1),(0,1)] if d != (preferred_dx, preferred_dy)]
         random.shuffle(other_directions) 
@@ -137,7 +150,7 @@ def update_cars():
         else:
             pass
 
-# -------- أشخاص مع هدف عشوائي --------
+# -------- أشخاص --------
 people = []
 for _ in range(50):
     while True:
@@ -147,7 +160,7 @@ for _ in range(50):
             break
 
 def update_people():
-    """تحسين بسيط لحركة الأشخاص نحو هدفهم."""
+    """حركة الأشخاص"""
     all_obstacles = {tuple(c['pos']) for c in cars}
     all_obstacles.add(robot.pos)
 
@@ -173,51 +186,76 @@ def update_people():
         else:
             person['target'] = (random.randint(1,COLS-2),random.randint(1,ROWS-2))
 
-# -------- رسم المدينة (كما هي) --------
-def draw_city(agent_pos=None, target_pos=None):
-    plt.clf()
+# =======================================================
+# 🎨 Pygame الرسم
+# =======================================================
+pygame.init()
+SCREEN = pygame.display.set_mode((WIDTH, HEIGHT))
+pygame.display.set_caption("Smart Delivery Robot Simulation (Pygame)")
+# FONT = pygame.font.Font(None, 24) # يمكن استخدامه لاحقاً لعرض النصوص
+
+def draw_city(screen, agent_pos=None, target_pos=None):
+    """
+    يرسم المدينة باستخدام Pygame API.
+    """
+    screen.fill(WHITE)
+
     for y in range(ROWS):
         for x in range(COLS):
+            rect = pygame.Rect(x * TILE_SIZE, y * TILE_SIZE, TILE_SIZE, TILE_SIZE)
             cell = grid[y,x]
-            color = 'white'
-            if cell==1: color='gray'
-            elif cell==2: color='lightgreen'
-            elif cell==3: 
-                color=traffic_signals.get((x,y),'red') 
-            elif cell==4: color='green'
-            plt.fill_between([x,x+1],[y,y],[y+1,y+1],color=color)
+            color = WHITE
+            
+            if cell == 1: color = GRAY
+            elif cell == 2: color = LIGHT_GREEN
+            elif cell == 3:
+                # لون إشارة المرور
+                state = traffic_signals.get((x,y), 'red')
+                color = GREEN if state == 'green' else RED # تم تصحيح: استخدام GREEN
+            elif cell == 4: color = DARK_GREEN 
 
+            # رسم المربع الأساسي
+            pygame.draw.rect(screen, color, rect)
+            pygame.draw.rect(screen, BLACK, rect, 1) # حدود المربع
+
+    # رسم المطاعم
     for rx,ry in restaurants:
-        plt.fill_between([rx,rx+1],[ry,ry],[ry+1,ry+1],color='darkgreen')
+        rect = pygame.Rect(rx * TILE_SIZE, ry * TILE_SIZE, TILE_SIZE, TILE_SIZE)
+        pygame.draw.rect(screen, DARK_GREEN, rect)
 
+    # رسم الأشخاص
     for person in people:
         px,py=person['pos']
-        plt.fill_between([px,px+1],[py,py],[py+1,py+1],color='pink')
+        rect = pygame.Rect(px * TILE_SIZE, py * TILE_SIZE, TILE_SIZE, TILE_SIZE)
+        pygame.draw.circle(screen, PINK, rect.center, TILE_SIZE // 3)
 
+    # رسم السيارات
     for car in cars:
         cx,cy=car['pos']
-        plt.fill_between([cx,cx+1],[cy,cy],[cy+1,cy+1],color='orange')
+        rect = pygame.Rect(cx * TILE_SIZE, cy * TILE_SIZE, TILE_SIZE, TILE_SIZE)
+        pygame.draw.rect(screen, ORANGE, rect)
 
+    # رسم الروبوت
     if agent_pos:
         ax,ay=agent_pos
-        plt.fill_between([ax,ax+1],[ay,ay],[ay+1,ay+1],color='blue')
+        rect = pygame.Rect(ax * TILE_SIZE, ay * TILE_SIZE, TILE_SIZE, TILE_SIZE)
+        pygame.draw.rect(screen, BLUE, rect)
 
+    # رسم الهدف
     if target_pos:
         tx,ty=target_pos
-        plt.fill_between([tx,tx+1],[ty,ty],[ty+1,ty+1],color='red')
+        rect = pygame.Rect(tx * TILE_SIZE, ty * TILE_SIZE, TILE_SIZE, TILE_SIZE)
+        pygame.draw.circle(screen, YELLOW, rect.center, TILE_SIZE // 2 - 3)
 
-    plt.xlim(0,COLS)
-    plt.ylim(0,ROWS)
-    plt.gca().invert_yaxis()
-    plt.axis('off')
-    plt.pause(0.001)
+    # تحديث الشاشة
+    pygame.display.flip()
 
-plt.ion()
-draw_city(agent_pos=robot.pos)
-
+# =======================================================
+# 🕹️ حلقة Pygame الرئيسية (Game Loop)
+# =======================================================
 delivery_queue = DeliveryQueue()
 
-# --- جزء إدخال الطلبات (كما هو) ---
+# --- جزء إدخال الطلبات ---
 
 while True:
     print("\nEnter multiple delivery requests (X,Y,Customer,Details)")
@@ -226,6 +264,7 @@ while True:
     
     if line == "y":
         print("❌ Program stopped by user.")
+        pygame.quit() 
         exit(0)
     if line == "x":
         break
@@ -248,24 +287,31 @@ while True:
     except ValueError:
         print("❌ Make sure numbers are entered correctly.")
 
-# --- Step 2: تنفيذ كل الطلبات (حلقة محاكاة مستمرة) ---
-print("\n🚀 Starting deliveries with enhanced realistic environment simulation...")
+
+# --- حلقة المحاكاة الرئيسية (Game Loop) ---
+print("\n🚀 Starting deliveries with Pygame simulation...")
 
 delivery_count = 0
 total_steps_taken = 0
 total_delivery_time = 0
-
-FRAME_DELAY = 0.1 # تأخير زمني أساسي لكل خطوة محاكاة (لتصبح الحركة مرئية وسريعة)
 
 current_delivery_goal = None
 delivery_in_progress = False
 delivery_start_time = 0.0
 initial_steps = 0
 
-# حلقة المحاكاة الرئيسية
-while delivery_queue.has_requests() or delivery_in_progress:
-    
-    # 1. تحديث البيئة (يتم كل FRAME_DELAY)
+# التحكم في معدل الإطارات في الثانية (سلس)
+FPS = 1
+clock = pygame.time.Clock()
+
+running = True
+while running:
+    # معالجة أحداث Pygame (للإغلاق)
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+
+    # 1. تحديث البيئة
     update_traffic_signals()
     update_cars()
     update_people()
@@ -277,18 +323,19 @@ while delivery_queue.has_requests() or delivery_in_progress:
     for person in people:
         dynamic_obstacles.add(person['pos'])
         
-    # 3. إدارة الطلب الحالي
+    # 3. إدارة الطلب
     if not delivery_in_progress:
-        next_req = delivery_queue.get_closest_request(robot.pos)
-        if next_req:
-            print(f"\n\n🚚 Delivering: {next_req}")
-            current_delivery_goal = next_req.destination
-            delivery_in_progress = True
-            delivery_start_time = time.time()
-            initial_steps = len(robot.path_history)
-        else:
-            break # لا توجد طلبات أخرى
+        if not delivery_queue.has_requests():
+            running = False 
+            break
             
+        next_req = delivery_queue.get_closest_request(robot.pos)
+        print(f"\n\n🚚 Delivering: {next_req}")
+        current_delivery_goal = next_req.destination
+        delivery_in_progress = True
+        delivery_start_time = time.time()
+        initial_steps = len(robot.path_history)
+        
     if delivery_in_progress:
         
         # 4. تنفيذ خطوة واحدة للروبوت
@@ -300,6 +347,7 @@ while delivery_queue.has_requests() or delivery_in_progress:
         
         # 5. فحص حالة التسليم
         if reached_goal:
+            # حساب المقاييس
             delivery_end_time = time.time()
             delivery_time = delivery_end_time - delivery_start_time
             steps_taken = len(robot.path_history) - initial_steps
@@ -312,12 +360,12 @@ while delivery_queue.has_requests() or delivery_in_progress:
             current_delivery_goal = None
             delivery_in_progress = False
     
-    # 6. تحديث الرسم والتأخير الزمني (يجب أن يتم الرسم في كل خطوة محاكاة)
-    draw_city(agent_pos=robot.pos, target_pos=current_delivery_goal)
-    time.sleep(FRAME_DELAY)
+    # 6. تحديث الرسم والتحكم في FPS
+    draw_city(SCREEN, agent_pos=robot.pos, target_pos=current_delivery_goal)
+    clock.tick(FPS) 
 
-
-# --- مقاييس الأداء النهائية ---
+# --- إنهاء Pygame والمقاييس ---
+pygame.quit() 
 print("\n--- 📊 Performance Summary ---")
 if delivery_count > 0:
     print(f"Total Deliveries: {delivery_count}")
