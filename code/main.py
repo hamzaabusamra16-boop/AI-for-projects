@@ -1,10 +1,12 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from collections import deque
-from Robot import Robot
+# يجب التأكد من أن كود Robot.py المعدل موجود في ملف Robot.py
+from Robot import Robot 
 import time
 import random
-from User import DeliveryQueue, DeliveryRequest
+# تأكد من أن كلاسات DeliveryQueue, DeliveryRequest موجودة في ملف User.py
+from User import DeliveryQueue, DeliveryRequest 
 
 ROWS, COLS = 30, 30
 # =======================================================
@@ -66,9 +68,9 @@ current_active_group = 'group_A'
 for pos in signal_groups['group_A']: traffic_signals[pos] = 'green'
 for pos in signal_groups['group_B']: traffic_signals[pos] = 'red'
 
-
+# 🚦 التعديل المطلوب: تغيير الإشارة كل 5 خطوات محاكاة
 signal_timer = 0
-SIGNAL_CYCLE = 10 # عدد الخطوات/الوقت لتغيير الإشارة
+SIGNAL_CYCLE = 5 
 
 def update_traffic_signals():
     """تناوب واقعي للإشارات بين مجموعتين."""
@@ -94,7 +96,7 @@ def update_traffic_signals():
             
         print(f"🚦 Traffic signals switched. {current_active_group} is GREEN.")
 
-# -------- سيارات مع مسار محدد (كما هي، لكن منطق التحديث معدل) --------
+# -------- سيارات مع مسار محدد --------
 cars = []
 for _ in range(30):
     while True:
@@ -105,21 +107,17 @@ for _ in range(30):
 
 def update_cars():
     """تحسين حركة السيارات لتجنب الاصطدام."""
-    # جمع مواقع جميع المركبات والأشخاص الحالية
     current_occupancies = {tuple(c['pos']) for c in cars}
     current_occupancies.update({tuple(p['pos']) for p in people})
 
     for car in cars:
         cx, cy = car['pos']
-        possible_moves = []
         
-        # محاولة التحرك في الاتجاه الحالي أولاً
         preferred_dx, preferred_dy = car['dir']
         
-        # قائمة بالاتجاهات (الاتجاه المفضل أولاً)
         directions = [(preferred_dx, preferred_dy)]
         other_directions = [d for d in [(-1,0),(1,0),(0,-1),(0,1)] if d != (preferred_dx, preferred_dy)]
-        random.shuffle(other_directions) # خلط الاتجاهات الأخرى
+        random.shuffle(other_directions) 
         directions.extend(other_directions)
         
         chosen_move = None
@@ -127,22 +125,19 @@ def update_cars():
             nx, ny = cx + dx, cy + dy
             next_pos = (nx, ny)
             
-            # تحقق من الحدود، ليست عقبة ثابتة (1)، ليست موقع الروبوت (هذا سيتم تجاوزه بواسطة الروبوت نفسه)
             if (0 < nx < COLS-1 and 0 < ny < ROWS-1 and grid[ny, nx] != 1):
-                # تجنب المواقع المحتلة من المركبات/الأشخاص الأخرى (واقعية أكثر)
                 if next_pos not in (current_occupancies - {car['pos']}):
                     chosen_move = (nx, ny, dx, dy)
-                    break # وجدنا مساراً آمناً، نتحرك
+                    break 
         
         if chosen_move:
             nx, ny, dx, dy = chosen_move
             car['pos'] = (nx, ny)
             car['dir'] = (dx, dy)
         else:
-            # إذا لم تجد أي حركة آمنة (محاصرة)، تبقى في مكانها وتنتظر
             pass
 
-# -------- أشخاص مع هدف عشوائي (كما هي) --------
+# -------- أشخاص مع هدف عشوائي --------
 people = []
 for _ in range(50):
     while True:
@@ -153,7 +148,6 @@ for _ in range(50):
 
 def update_people():
     """تحسين بسيط لحركة الأشخاص نحو هدفهم."""
-    # جمع مواقع العقبات (لتجنب الاصطدام بالسيارات/الروبوت)
     all_obstacles = {tuple(c['pos']) for c in cars}
     all_obstacles.add(robot.pos)
 
@@ -177,7 +171,6 @@ def update_people():
             
             person['pos'] = best_next_step
         else:
-            # عند الوصول، اختر هدفًا عشوائيًا جديدًا
             person['target'] = (random.randint(1,COLS-2),random.randint(1,ROWS-2))
 
 # -------- رسم المدينة (كما هي) --------
@@ -190,7 +183,6 @@ def draw_city(agent_pos=None, target_pos=None):
             if cell==1: color='gray'
             elif cell==2: color='lightgreen'
             elif cell==3: 
-                # تحديث لون الإشارة بناءً على حالتها
                 color=traffic_signals.get((x,y),'red') 
             elif cell==4: color='green'
             plt.fill_between([x,x+1],[y,y],[y+1,y+1],color=color)
@@ -256,17 +248,24 @@ while True:
     except ValueError:
         print("❌ Make sure numbers are entered correctly.")
 
-# --- Step 2: تنفيذ كل الطلبات (مع تحديثات الحركة الجديدة) ---
+# --- Step 2: تنفيذ كل الطلبات (حلقة محاكاة مستمرة) ---
 print("\n🚀 Starting deliveries with enhanced realistic environment simulation...")
 
 delivery_count = 0
 total_steps_taken = 0
 total_delivery_time = 0
 
-while delivery_queue.has_requests():
-    delivery_start_time = time.time()
+FRAME_DELAY = 0.1 # تأخير زمني أساسي لكل خطوة محاكاة (لتصبح الحركة مرئية وسريعة)
+
+current_delivery_goal = None
+delivery_in_progress = False
+delivery_start_time = 0.0
+initial_steps = 0
+
+# حلقة المحاكاة الرئيسية
+while delivery_queue.has_requests() or delivery_in_progress:
     
-    # 1. تحديث البيئة
+    # 1. تحديث البيئة (يتم كل FRAME_DELAY)
     update_traffic_signals()
     update_cars()
     update_people()
@@ -277,33 +276,46 @@ while delivery_queue.has_requests():
         dynamic_obstacles.add(car['pos'])
     for person in people:
         dynamic_obstacles.add(person['pos'])
+        
+    # 3. إدارة الطلب الحالي
+    if not delivery_in_progress:
+        next_req = delivery_queue.get_closest_request(robot.pos)
+        if next_req:
+            print(f"\n\n🚚 Delivering: {next_req}")
+            current_delivery_goal = next_req.destination
+            delivery_in_progress = True
+            delivery_start_time = time.time()
+            initial_steps = len(robot.path_history)
+        else:
+            break # لا توجد طلبات أخرى
+            
+    if delivery_in_progress:
+        
+        # 4. تنفيذ خطوة واحدة للروبوت
+        reached_goal = robot.move_single_step(
+            goal=current_delivery_goal, 
+            dynamic_obstacles=dynamic_obstacles,
+            traffic_signals=traffic_signals
+        )
+        
+        # 5. فحص حالة التسليم
+        if reached_goal:
+            delivery_end_time = time.time()
+            delivery_time = delivery_end_time - delivery_start_time
+            steps_taken = len(robot.path_history) - initial_steps
+            total_steps_taken += steps_taken
+            total_delivery_time += delivery_time
+            delivery_count += 1
+            print(f"\n✅ Delivery completed! Steps: {steps_taken}, Time: {delivery_time:.2f}s")
+            
+            # إعادة التعيين للطلب التالي
+            current_delivery_goal = None
+            delivery_in_progress = False
     
-    next_req = delivery_queue.get_closest_request(robot.pos)
-    if not next_req:
-        break
-    print(f"\n\n🚚 Delivering: {next_req}")
-    
-    # استخدام الدالة المحسنة move_to (والتي تحتاج أن تكون في ملف Robot.py كما عدلناها سابقاً)
-    robot.move_to(
-        goal=next_req.destination, 
-        draw_callback=draw_city, 
-        delay=0.2, 
-        dynamic_obstacles=dynamic_obstacles,
-        traffic_signals=traffic_signals
-    )
-    
-    delivery_end_time = time.time()
-    delivery_time = delivery_end_time - delivery_start_time
-    # هنا يجب الانتباه: إذا كنت لا تستخدم reset_path_history()، يجب أن تحسب الخطوات المضافة
-    # Steps_taken = len(robot.path_history) - total_steps_taken 
-    
-    # للتجربة، سنعتمد أن الخطوات هي طول المسار الذي تم قطعه
-    steps_taken = len(robot.path_history) - total_steps_taken 
-    total_steps_taken = len(robot.path_history)
-    total_delivery_time += delivery_time
-    delivery_count += 1
-    
-    print(f"\n✅ Delivery completed! Steps: {steps_taken}, Time: {delivery_time:.2f}s")
+    # 6. تحديث الرسم والتأخير الزمني (يجب أن يتم الرسم في كل خطوة محاكاة)
+    draw_city(agent_pos=robot.pos, target_pos=current_delivery_goal)
+    time.sleep(FRAME_DELAY)
+
 
 # --- مقاييس الأداء النهائية ---
 print("\n--- 📊 Performance Summary ---")
