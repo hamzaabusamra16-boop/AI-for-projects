@@ -237,9 +237,51 @@ def draw_city(screen, agent_pos=None, target_pos=None):
 
     # رسم الروبوت
     if agent_pos:
-        ax,ay=agent_pos
-        rect = pygame.Rect(ax * TILE_SIZE, ay * TILE_SIZE, TILE_SIZE, TILE_SIZE)
-        pygame.draw.rect(screen, BLUE, rect)
+        ax, ay = agent_pos
+        cx = ax * TILE_SIZE + TILE_SIZE // 2
+        cy = ay * TILE_SIZE + TILE_SIZE // 2
+
+        # أبعاد الجسم
+        body_w = TILE_SIZE * 0.8
+        body_h = TILE_SIZE * 0.5
+
+        # ظل السيارة
+        shadow = pygame.Rect(
+            cx - body_w//2 + 2,
+            cy - body_h//2 + 3,
+            body_w,
+            body_h
+        )
+        pygame.draw.rect(screen, (30,30,30), shadow, border_radius=6)
+
+        # جسم السيارة الرئيسي
+        body = pygame.Rect(
+            cx - body_w//2,
+            cy - body_h//2,
+            body_w,
+            body_h
+        )
+        pygame.draw.rect(screen, BLUE, body, border_radius=6)
+
+        # الزجاج الأمامي
+        glass = pygame.Rect(
+            cx - body_w//4,
+            cy - body_h//3,
+            body_w//2,
+            body_h//2
+        )
+        pygame.draw.rect(screen, (180,220,255), glass, border_radius=3)
+
+        # المصابيح الأمامية
+        pygame.draw.circle(screen, YELLOW, (cx + body_w//2 - 3, cy - body_h//4), 3)
+        pygame.draw.circle(screen, YELLOW, (cx + body_w//2 - 3, cy + body_h//4), 3)
+
+        # العجلات
+        wheel_radius = 4
+        pygame.draw.circle(screen, BLACK, (cx - body_w//3, cy - body_h//2), wheel_radius)
+        pygame.draw.circle(screen, BLACK, (cx + body_w//3, cy - body_h//2), wheel_radius)
+        pygame.draw.circle(screen, BLACK, (cx - body_w//3, cy + body_h//2), wheel_radius)
+        pygame.draw.circle(screen, BLACK, (cx + body_w//3, cy + body_h//2), wheel_radius)
 
     # رسم الهدف
     if target_pos:
@@ -375,3 +417,4 @@ if delivery_count > 0:
     print(f"Average Time per Delivery: {total_delivery_time / delivery_count:.2f} seconds")
 else:
     print("No deliveries completed.")
+    
